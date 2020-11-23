@@ -9,4 +9,6 @@
 /home/mikolaj/C/main.c
 stdio.h
 -
+SDL.h
+-
 
