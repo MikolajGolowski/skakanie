@@ -9,5 +9,5 @@ find_package(SDL2_image REQUIRED)
 include_directories(${SDL2_INCLUDE_DIRS})
 include_directories(${SDL2_IMAGE_DIRS})
 
-add_executable(Niekonczace_sie_skakanie WIN32 Main.cpp)
+add_executable(Niekonczace_sie_skakanie Main.c)
 target_link_libraries(Niekonczace_sie_skakanie ${SDL2_LIBRARIES} ${SDL2_IMAGE_LIBRARIES})

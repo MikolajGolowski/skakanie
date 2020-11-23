@@ -27,11 +27,21 @@
 					<DistClean command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/mikolaj/C/final"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="Niekonczace_sie_skakanie">
 				<Option output="/home/mikolaj/C/final/Niekonczace_sie_skakanie" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/mikolaj/C/final"/>
 				<Option object_output="./"/>
-				<Option type="0"/>
+				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/usr/include/SDL2"/>
@@ -47,7 +57,7 @@
 				<Option output="/home/mikolaj/C/final/Niekonczace_sie_skakanie" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/mikolaj/C/final"/>
 				<Option object_output="./"/>
-				<Option type="0"/>
+				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/usr/include/SDL2"/>
@@ -59,18 +69,8 @@
 					<DistClean command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/home/mikolaj/C/final"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 		</Build>
-		<Unit filename="/home/mikolaj/C/final/Main.cpp">
+		<Unit filename="/home/mikolaj/C/final/Main.c">
 			<Option target="Niekonczace_sie_skakanie"/>
 		</Unit>
 		<Unit filename="/home/mikolaj/C/final/CMakeLists.txt">
