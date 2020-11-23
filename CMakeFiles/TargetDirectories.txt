@@ -1,3 +1,0 @@
-/home/mikolaj/C/CMakeFiles/rebuild_cache.dir
-/home/mikolaj/C/CMakeFiles/Tutorial.dir
-/home/mikolaj/C/CMakeFiles/edit_cache.dir
