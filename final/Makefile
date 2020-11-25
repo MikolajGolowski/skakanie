@@ -89,8 +89,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/129/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/snap/clion/129/bin/cmake/linux/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -197,6 +197,33 @@ code/kernel/Engine.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Niekonczace_sie_skakanie.dir/build.make CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Engine.c.s
 .PHONY : code/kernel/Engine.c.s
 
+code/kernel/Update.o: code/kernel/Update.c.o
+
+.PHONY : code/kernel/Update.o
+
+# target to build an object file
+code/kernel/Update.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Niekonczace_sie_skakanie.dir/build.make CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.o
+.PHONY : code/kernel/Update.c.o
+
+code/kernel/Update.i: code/kernel/Update.c.i
+
+.PHONY : code/kernel/Update.i
+
+# target to preprocess a source file
+code/kernel/Update.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Niekonczace_sie_skakanie.dir/build.make CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.i
+.PHONY : code/kernel/Update.c.i
+
+code/kernel/Update.s: code/kernel/Update.c.s
+
+.PHONY : code/kernel/Update.s
+
+# target to generate assembly for a file
+code/kernel/Update.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Niekonczace_sie_skakanie.dir/build.make CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.s
+.PHONY : code/kernel/Update.c.s
+
 code/rendering/RenderingLayers.o: code/rendering/RenderingLayers.c.o
 
 .PHONY : code/rendering/RenderingLayers.o
@@ -251,32 +278,32 @@ code/rendering/Tekstury.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Niekonczace_sie_skakanie.dir/build.make CMakeFiles/Niekonczace_sie_skakanie.dir/code/rendering/Tekstury.c.s
 .PHONY : code/rendering/Tekstury.c.s
 
-code/sterowanie/KontrolaGracza.o: code/sterowanie/KontrolaGracza.c.o
+code/sterowanie/Sterowanie.o: code/sterowanie/Sterowanie.c.o
 
-.PHONY : code/sterowanie/KontrolaGracza.o
+.PHONY : code/sterowanie/Sterowanie.o
 
 # target to build an object file
-code/sterowanie/KontrolaGracza.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Niekonczace_sie_skakanie.dir/build.make CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/KontrolaGracza.c.o
-.PHONY : code/sterowanie/KontrolaGracza.c.o
+code/sterowanie/Sterowanie.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Niekonczace_sie_skakanie.dir/build.make CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/Sterowanie.c.o
+.PHONY : code/sterowanie/Sterowanie.c.o
 
-code/sterowanie/KontrolaGracza.i: code/sterowanie/KontrolaGracza.c.i
+code/sterowanie/Sterowanie.i: code/sterowanie/Sterowanie.c.i
 
-.PHONY : code/sterowanie/KontrolaGracza.i
+.PHONY : code/sterowanie/Sterowanie.i
 
 # target to preprocess a source file
-code/sterowanie/KontrolaGracza.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Niekonczace_sie_skakanie.dir/build.make CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/KontrolaGracza.c.i
-.PHONY : code/sterowanie/KontrolaGracza.c.i
+code/sterowanie/Sterowanie.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Niekonczace_sie_skakanie.dir/build.make CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/Sterowanie.c.i
+.PHONY : code/sterowanie/Sterowanie.c.i
 
-code/sterowanie/KontrolaGracza.s: code/sterowanie/KontrolaGracza.c.s
+code/sterowanie/Sterowanie.s: code/sterowanie/Sterowanie.c.s
 
-.PHONY : code/sterowanie/KontrolaGracza.s
+.PHONY : code/sterowanie/Sterowanie.s
 
 # target to generate assembly for a file
-code/sterowanie/KontrolaGracza.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Niekonczace_sie_skakanie.dir/build.make CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/KontrolaGracza.c.s
-.PHONY : code/sterowanie/KontrolaGracza.c.s
+code/sterowanie/Sterowanie.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Niekonczace_sie_skakanie.dir/build.make CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/Sterowanie.c.s
+.PHONY : code/sterowanie/Sterowanie.c.s
 
 # Help Target
 help:
@@ -293,15 +320,18 @@ help:
 	@echo "... code/kernel/Engine.o"
 	@echo "... code/kernel/Engine.i"
 	@echo "... code/kernel/Engine.s"
+	@echo "... code/kernel/Update.o"
+	@echo "... code/kernel/Update.i"
+	@echo "... code/kernel/Update.s"
 	@echo "... code/rendering/RenderingLayers.o"
 	@echo "... code/rendering/RenderingLayers.i"
 	@echo "... code/rendering/RenderingLayers.s"
 	@echo "... code/rendering/Tekstury.o"
 	@echo "... code/rendering/Tekstury.i"
 	@echo "... code/rendering/Tekstury.s"
-	@echo "... code/sterowanie/KontrolaGracza.o"
-	@echo "... code/sterowanie/KontrolaGracza.i"
-	@echo "... code/sterowanie/KontrolaGracza.s"
+	@echo "... code/sterowanie/Sterowanie.o"
+	@echo "... code/sterowanie/Sterowanie.i"
+	@echo "... code/sterowanie/Sterowanie.s"
 .PHONY : help
 
 

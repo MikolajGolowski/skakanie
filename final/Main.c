@@ -3,7 +3,15 @@
 #include "code/kernel/Engine.h"
 #include "code/rendering/RenderingLayers.h"
 #include "code/rendering/Tekstury.h"
+#include "code/sterowanie/Sterowanie.h"
+#include "code/kernel/Update.h"
+#include <time.h>
 
+#if WINDOWS
+#include <Windows.h>
+#else
+#include <unistd.h>
+#endif
 
 int main(int argc, char *argv[])
 {
@@ -15,34 +23,65 @@ int main(int argc, char *argv[])
 		SDL_WINDOWPOS_UNDEFINED,
 		SCREEN_WIDTH,
 		SCREEN_HEIGHT,
-		SDL_WINDOW_BORDERLESS
+		0
 	);
 
 	gra_t gra;
+
+	gra.gracz.stan = SPOCZYNEK;
+	gra.wynik = 0;
 
     gra.schodki[0].pozycja.x = 15;
     gra.schodki[1].pozycja.x = 45;
     gra.schodki[2].pozycja.x = 12;
     gra.schodki[3].pozycja.x = 250;
     gra.schodki[4].pozycja.x = 350;
-    gra.schodki[4].pozycja.y = 300;
-    gra.schodki[3].pozycja.y = 610;
-    gra.schodki[2].pozycja.y = 150;
-    gra.schodki[1].pozycja.y = 67;
-    gra.schodki[0].pozycja.y = 453;
+    gra.schodki[4].pozycja.y = 67;
+    gra.schodki[3].pozycja.y = 150;
+    gra.schodki[2].pozycja.y = 300;
+    gra.schodki[1].pozycja.y = 453;
+    gra.schodki[0].pozycja.y = 610;
+
+    gra.gracz.pozycja_na_ekranie.x = SCREEN_WIDTH/2-ROZMIAR_GRACZA/2;
+    gra.gracz.pozycja_na_ekranie.y = SCREEN_HEIGHT-100-ROZMIAR_GRACZA;
+    gra.gracz.predkosc_y = 0;
+    gra.gracz.predkosc_x = 0;
+
 
 	SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_SOFTWARE);
 
 	LoadTextures(renderer);
 
     SDL_SetRenderDrawColor(renderer, 10, 20, 100, 0);
-   while(1){
-	    //input
+
+    clock_t poczatek,uplyw = clock();
+   // SDL_DisplayMode* displayMode;
+   // int monitorHz = SDL_GetDisplayMode(0,0,displayMode) == 0 ? displayMode->refresh_rate : 60;
+    int monitorHz = 500;
+
+    while(1){
+        poczatek = clock();
+     /*   if(gra.schodki[1].pozycja.x<500)
+            gra.schodki[1].pozycja.x++;
+        else
+            gra.schodki[1].pozycja.x=100;*/
+        if(InputZKlawiatury(&gra.gracz) == -1){
+            break;
+        }
+       // printf("%ld\n",CLOCKS_PER_SEC/(clock()-uplyw));       ILOSC FPS
+        Update(&gra,clock() - uplyw);
+
+        uplyw = clock();
 	    RenderWszystko(renderer, &gra);
-      // gra.schodki[0].pozycja.x++;
-       if(gra.schodki[0].pozycja.x >= 600)
-           break;
-       //printf("%d\n",gra.schodki[0].pozycja.x);
+
+    /*    while (((clock() - poczatek)) <= CLOCKS_PER_SEC/monitorHz){
+#if WINDOWS
+            Sleep(1);
+#else
+            usleep(10);
+#endif
+        }*/
+        SDL_RenderPresent(renderer);
 	}
 
 

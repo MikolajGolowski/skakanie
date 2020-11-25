@@ -17,12 +17,34 @@ code/rendering/RenderingLayers.h
 /home/mikolaj/C/final/code/rendering/RenderingLayers.h
 code/rendering/Tekstury.h
 /home/mikolaj/C/final/code/rendering/Tekstury.h
+code/sterowanie/Sterowanie.h
+/home/mikolaj/C/final/code/sterowanie/Sterowanie.h
+code/kernel/Update.h
+/home/mikolaj/C/final/code/kernel/Update.h
+time.h
+-
+Windows.h
+-
+unistd.h
+-
 
 /home/mikolaj/C/final/code/kernel/Engine.c
 Engine.h
 /home/mikolaj/C/final/code/kernel/Engine.h
 
 /home/mikolaj/C/final/code/kernel/Engine.h
+
+/home/mikolaj/C/final/code/kernel/Update.c
+stdio.h
+-
+Update.h
+/home/mikolaj/C/final/code/kernel/Update.h
+
+/home/mikolaj/C/final/code/kernel/Update.h
+Engine.h
+/home/mikolaj/C/final/code/kernel/Engine.h
+time.h
+-
 
 /home/mikolaj/C/final/code/rendering/RenderingLayers.c
 RenderingLayers.h
@@ -47,6 +69,16 @@ SDL_image.h
 /home/mikolaj/C/final/code/rendering/SDL_image.h
 SDL.h
 /home/mikolaj/C/final/code/rendering/SDL.h
+
+/home/mikolaj/C/final/code/sterowanie/Sterowanie.c
+Sterowanie.h
+/home/mikolaj/C/final/code/sterowanie/Sterowanie.h
+SDL.h
+/home/mikolaj/C/final/code/sterowanie/SDL.h
+
+/home/mikolaj/C/final/code/sterowanie/Sterowanie.h
+../kernel/Engine.h
+/home/mikolaj/C/final/code/kernel/Engine.h
 
 /usr/include/SDL2/SDL.h
 SDL_main.h

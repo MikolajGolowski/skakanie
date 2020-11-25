@@ -79,6 +79,12 @@
 		<Unit filename="/home/mikolaj/C/final/code/kernel/Engine.h">
 			<Option target="Niekonczace_sie_skakanie"/>
 		</Unit>
+		<Unit filename="/home/mikolaj/C/final/code/kernel/Update.c">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
+		<Unit filename="/home/mikolaj/C/final/code/kernel/Update.h">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
 		<Unit filename="/home/mikolaj/C/final/code/rendering/RenderingLayers.c">
 			<Option target="Niekonczace_sie_skakanie"/>
 		</Unit>

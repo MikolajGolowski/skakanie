@@ -7,7 +7,9 @@ SDL_Rect playerPos = {SCREEN_WIDTH/2-ROZMIAR_GRACZA/2,
 
 
 bool RenderPlayer(SDL_Renderer* renderer, gracz_t *gracz){
-
+    playerPos.x = gracz->pozycja_na_ekranie.x;
+    playerPos.y = gracz->pozycja_na_ekranie.y;
+  //  printf("%d\n",playerPos.x);
     SDL_RenderCopy(renderer, gracz_tekstura,NULL, &playerPos);
     return true;
 }
@@ -30,6 +32,6 @@ bool RenderWszystko(SDL_Renderer* renderer, gra_t* gra){
     RenderTlo(renderer, gra);
     RenderSchodki(renderer, &gra->schodki);
     RenderPlayer(renderer, &gra->gracz);
-    SDL_RenderPresent(renderer);
+
     return 1;
 }

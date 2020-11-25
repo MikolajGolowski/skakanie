@@ -6,9 +6,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/home/mikolaj/C/final/Main.c" "/home/mikolaj/C/final/CMakeFiles/Niekonczace_sie_skakanie.dir/Main.c.o"
   "/home/mikolaj/C/final/code/kernel/Engine.c" "/home/mikolaj/C/final/CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Engine.c.o"
+  "/home/mikolaj/C/final/code/kernel/Update.c" "/home/mikolaj/C/final/CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.o"
   "/home/mikolaj/C/final/code/rendering/RenderingLayers.c" "/home/mikolaj/C/final/CMakeFiles/Niekonczace_sie_skakanie.dir/code/rendering/RenderingLayers.c.o"
   "/home/mikolaj/C/final/code/rendering/Tekstury.c" "/home/mikolaj/C/final/CMakeFiles/Niekonczace_sie_skakanie.dir/code/rendering/Tekstury.c.o"
-  "/home/mikolaj/C/final/code/sterowanie/KontrolaGracza.c" "/home/mikolaj/C/final/CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/KontrolaGracza.c.o"
+  "/home/mikolaj/C/final/code/sterowanie/Sterowanie.c" "/home/mikolaj/C/final/CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/Sterowanie.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

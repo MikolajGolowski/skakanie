@@ -129,18 +129,31 @@ CMakeFiles/Niekonczace_sie_skakanie.dir/code/rendering/Tekstury.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Niekonczace_sie_skakanie.dir/code/rendering/Tekstury.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mikolaj/C/final/code/rendering/Tekstury.c -o CMakeFiles/Niekonczace_sie_skakanie.dir/code/rendering/Tekstury.c.s
 
-CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/KontrolaGracza.c.o: CMakeFiles/Niekonczace_sie_skakanie.dir/flags.make
-CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/KontrolaGracza.c.o: code/sterowanie/KontrolaGracza.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mikolaj/C/final/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/KontrolaGracza.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/KontrolaGracza.c.o   -c /home/mikolaj/C/final/code/sterowanie/KontrolaGracza.c
+CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/Sterowanie.c.o: CMakeFiles/Niekonczace_sie_skakanie.dir/flags.make
+CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/Sterowanie.c.o: code/sterowanie/Sterowanie.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mikolaj/C/final/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/Sterowanie.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/Sterowanie.c.o   -c /home/mikolaj/C/final/code/sterowanie/Sterowanie.c
 
-CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/KontrolaGracza.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/KontrolaGracza.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mikolaj/C/final/code/sterowanie/KontrolaGracza.c > CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/KontrolaGracza.c.i
+CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/Sterowanie.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/Sterowanie.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mikolaj/C/final/code/sterowanie/Sterowanie.c > CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/Sterowanie.c.i
 
-CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/KontrolaGracza.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/KontrolaGracza.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mikolaj/C/final/code/sterowanie/KontrolaGracza.c -o CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/KontrolaGracza.c.s
+CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/Sterowanie.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/Sterowanie.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mikolaj/C/final/code/sterowanie/Sterowanie.c -o CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/Sterowanie.c.s
+
+CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.o: CMakeFiles/Niekonczace_sie_skakanie.dir/flags.make
+CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.o: code/kernel/Update.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mikolaj/C/final/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.o   -c /home/mikolaj/C/final/code/kernel/Update.c
+
+CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mikolaj/C/final/code/kernel/Update.c > CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.i
+
+CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mikolaj/C/final/code/kernel/Update.c -o CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.s
 
 # Object files for target Niekonczace_sie_skakanie
 Niekonczace_sie_skakanie_OBJECTS = \
@@ -148,7 +161,8 @@ Niekonczace_sie_skakanie_OBJECTS = \
 "CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Engine.c.o" \
 "CMakeFiles/Niekonczace_sie_skakanie.dir/code/rendering/RenderingLayers.c.o" \
 "CMakeFiles/Niekonczace_sie_skakanie.dir/code/rendering/Tekstury.c.o" \
-"CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/KontrolaGracza.c.o"
+"CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/Sterowanie.c.o" \
+"CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.o"
 
 # External object files for target Niekonczace_sie_skakanie
 Niekonczace_sie_skakanie_EXTERNAL_OBJECTS =
@@ -157,13 +171,14 @@ Niekonczace_sie_skakanie: CMakeFiles/Niekonczace_sie_skakanie.dir/Main.c.o
 Niekonczace_sie_skakanie: CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Engine.c.o
 Niekonczace_sie_skakanie: CMakeFiles/Niekonczace_sie_skakanie.dir/code/rendering/RenderingLayers.c.o
 Niekonczace_sie_skakanie: CMakeFiles/Niekonczace_sie_skakanie.dir/code/rendering/Tekstury.c.o
-Niekonczace_sie_skakanie: CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/KontrolaGracza.c.o
+Niekonczace_sie_skakanie: CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/Sterowanie.c.o
+Niekonczace_sie_skakanie: CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.o
 Niekonczace_sie_skakanie: CMakeFiles/Niekonczace_sie_skakanie.dir/build.make
 Niekonczace_sie_skakanie: /usr/lib/x86_64-linux-gnu/libSDL2.so
 Niekonczace_sie_skakanie: /usr/lib/x86_64-linux-gnu/libSDL2main.a
 Niekonczace_sie_skakanie: /usr/lib/x86_64-linux-gnu/libSDL2_image.so
 Niekonczace_sie_skakanie: CMakeFiles/Niekonczace_sie_skakanie.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mikolaj/C/final/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable Niekonczace_sie_skakanie"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mikolaj/C/final/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable Niekonczace_sie_skakanie"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Niekonczace_sie_skakanie.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

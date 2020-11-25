@@ -1,6 +1,12 @@
 #ifndef ENGINE_H
 #define ENGINE_H
 
+#define WINDOWS 0
+
+#define GRAWITACJA 1
+#define WAGA_GRACZA 8
+#define SILA_NOG_GACZA 3000
+
 #define WIDOCZNE_SCHODKI 5
 #define SCHODKI_DO_WYGRANIA 4
 #define ROZMIAR_GRACZA 75
@@ -13,8 +19,8 @@
 //stan gracza
 #define SKOK 0
 #define SPOCZYNEK 1
-#define ODBICIE 2
-#define SPADEK 3
+#define ODBICIE 3
+#define SPADEK 2
 
 //wyglad schodka
 #define LODOWY 0
@@ -25,14 +31,14 @@
 
 
 typedef struct{
-    int x,y;
+    float x,y;
 }
 pozycja_t;
 
 typedef struct {
     pozycja_t pozycja_na_ekranie;
     pozycja_t pozycja_w_grze;
-    float predkosc_x, predkosc_y;
+    int predkosc_x, predkosc_y;
     short stan;
 
 }
