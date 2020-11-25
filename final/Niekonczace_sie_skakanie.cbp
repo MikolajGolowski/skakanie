@@ -73,6 +73,30 @@
 		<Unit filename="/home/mikolaj/C/final/Main.c">
 			<Option target="Niekonczace_sie_skakanie"/>
 		</Unit>
+		<Unit filename="/home/mikolaj/C/final/code/kernel/Engine.c">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
+		<Unit filename="/home/mikolaj/C/final/code/kernel/Engine.h">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
+		<Unit filename="/home/mikolaj/C/final/code/rendering/RenderingLayers.c">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
+		<Unit filename="/home/mikolaj/C/final/code/rendering/RenderingLayers.h">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
+		<Unit filename="/home/mikolaj/C/final/code/rendering/Tekstury.c">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
+		<Unit filename="/home/mikolaj/C/final/code/rendering/Tekstury.h">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
+		<Unit filename="/home/mikolaj/C/final/code/sterowanie/KontrolaGracza.c">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
+		<Unit filename="/home/mikolaj/C/final/code/sterowanie/KontrolaGracza.h">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
 		<Unit filename="/home/mikolaj/C/final/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

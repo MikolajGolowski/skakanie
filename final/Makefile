@@ -170,6 +170,114 @@ Main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Niekonczace_sie_skakanie.dir/build.make CMakeFiles/Niekonczace_sie_skakanie.dir/Main.c.s
 .PHONY : Main.c.s
 
+code/kernel/Engine.o: code/kernel/Engine.c.o
+
+.PHONY : code/kernel/Engine.o
+
+# target to build an object file
+code/kernel/Engine.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Niekonczace_sie_skakanie.dir/build.make CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Engine.c.o
+.PHONY : code/kernel/Engine.c.o
+
+code/kernel/Engine.i: code/kernel/Engine.c.i
+
+.PHONY : code/kernel/Engine.i
+
+# target to preprocess a source file
+code/kernel/Engine.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Niekonczace_sie_skakanie.dir/build.make CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Engine.c.i
+.PHONY : code/kernel/Engine.c.i
+
+code/kernel/Engine.s: code/kernel/Engine.c.s
+
+.PHONY : code/kernel/Engine.s
+
+# target to generate assembly for a file
+code/kernel/Engine.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Niekonczace_sie_skakanie.dir/build.make CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Engine.c.s
+.PHONY : code/kernel/Engine.c.s
+
+code/rendering/RenderingLayers.o: code/rendering/RenderingLayers.c.o
+
+.PHONY : code/rendering/RenderingLayers.o
+
+# target to build an object file
+code/rendering/RenderingLayers.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Niekonczace_sie_skakanie.dir/build.make CMakeFiles/Niekonczace_sie_skakanie.dir/code/rendering/RenderingLayers.c.o
+.PHONY : code/rendering/RenderingLayers.c.o
+
+code/rendering/RenderingLayers.i: code/rendering/RenderingLayers.c.i
+
+.PHONY : code/rendering/RenderingLayers.i
+
+# target to preprocess a source file
+code/rendering/RenderingLayers.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Niekonczace_sie_skakanie.dir/build.make CMakeFiles/Niekonczace_sie_skakanie.dir/code/rendering/RenderingLayers.c.i
+.PHONY : code/rendering/RenderingLayers.c.i
+
+code/rendering/RenderingLayers.s: code/rendering/RenderingLayers.c.s
+
+.PHONY : code/rendering/RenderingLayers.s
+
+# target to generate assembly for a file
+code/rendering/RenderingLayers.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Niekonczace_sie_skakanie.dir/build.make CMakeFiles/Niekonczace_sie_skakanie.dir/code/rendering/RenderingLayers.c.s
+.PHONY : code/rendering/RenderingLayers.c.s
+
+code/rendering/Tekstury.o: code/rendering/Tekstury.c.o
+
+.PHONY : code/rendering/Tekstury.o
+
+# target to build an object file
+code/rendering/Tekstury.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Niekonczace_sie_skakanie.dir/build.make CMakeFiles/Niekonczace_sie_skakanie.dir/code/rendering/Tekstury.c.o
+.PHONY : code/rendering/Tekstury.c.o
+
+code/rendering/Tekstury.i: code/rendering/Tekstury.c.i
+
+.PHONY : code/rendering/Tekstury.i
+
+# target to preprocess a source file
+code/rendering/Tekstury.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Niekonczace_sie_skakanie.dir/build.make CMakeFiles/Niekonczace_sie_skakanie.dir/code/rendering/Tekstury.c.i
+.PHONY : code/rendering/Tekstury.c.i
+
+code/rendering/Tekstury.s: code/rendering/Tekstury.c.s
+
+.PHONY : code/rendering/Tekstury.s
+
+# target to generate assembly for a file
+code/rendering/Tekstury.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Niekonczace_sie_skakanie.dir/build.make CMakeFiles/Niekonczace_sie_skakanie.dir/code/rendering/Tekstury.c.s
+.PHONY : code/rendering/Tekstury.c.s
+
+code/sterowanie/KontrolaGracza.o: code/sterowanie/KontrolaGracza.c.o
+
+.PHONY : code/sterowanie/KontrolaGracza.o
+
+# target to build an object file
+code/sterowanie/KontrolaGracza.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Niekonczace_sie_skakanie.dir/build.make CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/KontrolaGracza.c.o
+.PHONY : code/sterowanie/KontrolaGracza.c.o
+
+code/sterowanie/KontrolaGracza.i: code/sterowanie/KontrolaGracza.c.i
+
+.PHONY : code/sterowanie/KontrolaGracza.i
+
+# target to preprocess a source file
+code/sterowanie/KontrolaGracza.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Niekonczace_sie_skakanie.dir/build.make CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/KontrolaGracza.c.i
+.PHONY : code/sterowanie/KontrolaGracza.c.i
+
+code/sterowanie/KontrolaGracza.s: code/sterowanie/KontrolaGracza.c.s
+
+.PHONY : code/sterowanie/KontrolaGracza.s
+
+# target to generate assembly for a file
+code/sterowanie/KontrolaGracza.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Niekonczace_sie_skakanie.dir/build.make CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/KontrolaGracza.c.s
+.PHONY : code/sterowanie/KontrolaGracza.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -182,6 +290,18 @@ help:
 	@echo "... Main.o"
 	@echo "... Main.i"
 	@echo "... Main.s"
+	@echo "... code/kernel/Engine.o"
+	@echo "... code/kernel/Engine.i"
+	@echo "... code/kernel/Engine.s"
+	@echo "... code/rendering/RenderingLayers.o"
+	@echo "... code/rendering/RenderingLayers.i"
+	@echo "... code/rendering/RenderingLayers.s"
+	@echo "... code/rendering/Tekstury.o"
+	@echo "... code/rendering/Tekstury.i"
+	@echo "... code/rendering/Tekstury.s"
+	@echo "... code/sterowanie/KontrolaGracza.o"
+	@echo "... code/sterowanie/KontrolaGracza.i"
+	@echo "... code/sterowanie/KontrolaGracza.s"
 .PHONY : help
 
 
