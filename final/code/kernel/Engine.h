@@ -2,10 +2,11 @@
 #define ENGINE_H
 
 #define WINDOWS 0
-
+#define POZYCJA_GRACZA_Y 400
 #define GRAWITACJA 1
 #define WAGA_GRACZA 8
-#define SILA_NOG_GACZA 3000
+#define SILA_NOG_GACZA 2500
+#define PREDKOSC_PODAZANIA 1000
 
 #define WIDOCZNE_SCHODKI 5
 #define SCHODKI_DO_WYGRANIA 4
@@ -46,10 +47,10 @@ gracz_t;
 
 typedef struct {
     pozycja_t pozycja;
+    pozycja_t predkosc;
     short wyglad;
     int nr_w_grze;
     short ruszaSie;
-    float predkosc;
 }
 schodek_t;
 
@@ -58,10 +59,13 @@ typedef struct {
     gracz_t gracz;
     int wynik;
     int seed;
+    short indexAktSchodka;
+    float predkoscWszystkiego;
 }
 gra_t;
 
-
+short KolejnySchodek(short schodekAkt);
+short WczesniejszySchodek(short schodekAkt);
 
 #endif //NIEKONCZACE_SIE_SKAKANIE_ENGINE_H
 

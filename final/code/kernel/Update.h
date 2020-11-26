@@ -6,4 +6,5 @@
 
 short Update(gra_t* gra, clock_t uplyw);
 
+
 #endif //NIEKONCZACE_SIE_SKAKANIE_UPDATE_H

@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	gra.gracz.stan = SPOCZYNEK;
 	gra.wynik = 0;
 
-    gra.schodki[0].pozycja.x = 15;
+    gra.schodki[0].pozycja.x = SCREEN_WIDTH/2 - SZEROKOSC_SCHODKA;
     gra.schodki[1].pozycja.x = 45;
     gra.schodki[2].pozycja.x = 12;
     gra.schodki[3].pozycja.x = 250;
@@ -41,6 +41,16 @@ int main(int argc, char *argv[])
     gra.schodki[2].pozycja.y = 300;
     gra.schodki[1].pozycja.y = 453;
     gra.schodki[0].pozycja.y = 610;
+
+    gra.wynik = 0;
+
+    gra.schodki[0].nr_w_grze = 0;
+    gra.schodki[1].nr_w_grze = 1;
+    gra.schodki[2].nr_w_grze = 2;
+    gra.schodki[3].nr_w_grze = 3;
+    gra.schodki[4].nr_w_grze = 4;
+
+    gra.indexAktSchodka = 0;
 
     gra.gracz.pozycja_na_ekranie.x = SCREEN_WIDTH/2-ROZMIAR_GRACZA/2;
     gra.gracz.pozycja_na_ekranie.y = SCREEN_HEIGHT-100-ROZMIAR_GRACZA;
@@ -68,7 +78,7 @@ int main(int argc, char *argv[])
         if(InputZKlawiatury(&gra.gracz) == -1){
             break;
         }
-       // printf("%ld\n",CLOCKS_PER_SEC/(clock()-uplyw));       ILOSC FPS
+       // printf("%ld\n",CLOCKS_PER_SEC/(clock()-uplyw));       //ILOSC FPS
         Update(&gra,clock() - uplyw);
 
         uplyw = clock();
