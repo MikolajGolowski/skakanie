@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Niekonczace_sie_skakanie.dir/Main.c.o"
   "CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Engine.c.o"
   "CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.o"
+  "CMakeFiles/Niekonczace_sie_skakanie.dir/code/mapa/Mapa.c.o"
   "CMakeFiles/Niekonczace_sie_skakanie.dir/code/rendering/RenderingLayers.c.o"
   "CMakeFiles/Niekonczace_sie_skakanie.dir/code/rendering/Tekstury.c.o"
   "CMakeFiles/Niekonczace_sie_skakanie.dir/code/sterowanie/Sterowanie.c.o"

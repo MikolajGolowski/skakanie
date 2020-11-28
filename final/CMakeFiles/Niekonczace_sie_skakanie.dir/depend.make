@@ -4,6 +4,7 @@
 CMakeFiles/Niekonczace_sie_skakanie.dir/Main.c.o: Main.c
 CMakeFiles/Niekonczace_sie_skakanie.dir/Main.c.o: code/kernel/Engine.h
 CMakeFiles/Niekonczace_sie_skakanie.dir/Main.c.o: code/kernel/Update.h
+CMakeFiles/Niekonczace_sie_skakanie.dir/Main.c.o: code/mapa/Mapa.h
 CMakeFiles/Niekonczace_sie_skakanie.dir/Main.c.o: code/rendering/RenderingLayers.h
 CMakeFiles/Niekonczace_sie_skakanie.dir/Main.c.o: code/rendering/Tekstury.h
 CMakeFiles/Niekonczace_sie_skakanie.dir/Main.c.o: code/sterowanie/Sterowanie.h
@@ -59,6 +60,7 @@ CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Engine.c.o: code/kernel/Engi
 CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.o: code/kernel/Engine.h
 CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.o: code/kernel/Update.c
 CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.o: code/kernel/Update.h
+CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.o: code/mapa/Mapa.h
 CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.o: code/rendering/Tekstury.h
 CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.o: /usr/include/SDL2/SDL.h
 CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.o: /usr/include/SDL2/SDL_assert.h
@@ -105,6 +107,10 @@ CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.o: /usr/include/SDL
 CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.o: /usr/include/SDL2/SDL_video.h
 CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.o: /usr/include/SDL2/begin_code.h
 CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.o: /usr/include/SDL2/close_code.h
+
+CMakeFiles/Niekonczace_sie_skakanie.dir/code/mapa/Mapa.c.o: code/kernel/Engine.h
+CMakeFiles/Niekonczace_sie_skakanie.dir/code/mapa/Mapa.c.o: code/mapa/Mapa.c
+CMakeFiles/Niekonczace_sie_skakanie.dir/code/mapa/Mapa.c.o: code/mapa/Mapa.h
 
 CMakeFiles/Niekonczace_sie_skakanie.dir/code/rendering/RenderingLayers.c.o: code/kernel/Engine.h
 CMakeFiles/Niekonczace_sie_skakanie.dir/code/rendering/RenderingLayers.c.o: code/rendering/RenderingLayers.c

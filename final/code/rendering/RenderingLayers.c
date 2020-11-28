@@ -23,16 +23,22 @@ bool RenderPlayer(SDL_Renderer* renderer, gracz_t *gracz){
         else
             SDL_RenderCopyEx(renderer, tekstura_gracz_skok, NULL, &playerPos, 0, NULL, SDL_FLIP_HORIZONTAL);
     }
+    else if(gracz->stan == SPADEK){
+        if(gracz->kierunek == PRAWO)
+            SDL_RenderCopy(renderer, tekstura_gracz_spada, NULL, &playerPos);
+        else
+            SDL_RenderCopyEx(renderer, tekstura_gracz_spada, NULL, &playerPos, 0, NULL, SDL_FLIP_HORIZONTAL);
+    }
     else             SDL_RenderCopy(renderer, tekstura_gracz_stoi, NULL, &playerPos);
 
 
     return true;
 }
 
-bool RenderSchodki(SDL_Renderer* renderer, schodek_t schodek[]){
+bool RenderSchodki(SDL_Renderer* renderer, schodek_t* schodek[]){
 
     for (int i = 0; i < WIDOCZNE_SCHODKI; ++i) {
-        SDL_Rect pos = {schodek[i].pozycja.x, schodek[i].pozycja.y, SZEROKOSC_SCHODKA,WYSOKOSC_SCHODKA};
+        SDL_Rect pos = {schodek[i]->pozycja.x, schodek[i]->pozycja.y, SZEROKOSC_SCHODKA,WYSOKOSC_SCHODKA};
         SDL_RenderCopy(renderer, schodek_tekstura,NULL, &pos);
     }
     

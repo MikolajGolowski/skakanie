@@ -9,5 +9,5 @@ find_package(SDL2_image REQUIRED)
 include_directories(${SDL2_INCLUDE_DIRS})
 include_directories(${SDL2_IMAGE_DIRS})
 
-add_executable(Niekonczace_sie_skakanie Main.c code/kernel/Engine.h code/kernel/Engine.c code/rendering/RenderingLayers.c code/rendering/RenderingLayers.h code/rendering/Tekstury.c code/rendering/Tekstury.h code/sterowanie/Sterowanie.c code/sterowanie/Sterowanie.h code/kernel/Update.c code/kernel/Update.h)
+add_executable(Niekonczace_sie_skakanie Main.c code/kernel/Engine.h code/kernel/Engine.c code/rendering/RenderingLayers.c code/rendering/RenderingLayers.h code/rendering/Tekstury.c code/rendering/Tekstury.h code/sterowanie/Sterowanie.c code/sterowanie/Sterowanie.h code/kernel/Update.c code/kernel/Update.h code/mapa/Mapa.c code/mapa/Mapa.h)
 target_link_libraries(Niekonczace_sie_skakanie ${SDL2_LIBRARIES} ${SDL2_IMAGE_LIBRARIES})

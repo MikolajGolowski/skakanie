@@ -5,6 +5,7 @@
 #include "code/rendering/Tekstury.h"
 #include "code/sterowanie/Sterowanie.h"
 #include "code/kernel/Update.h"
+#include "code/mapa/Mapa.h"
 #include <time.h>
 
 #if WINDOWS
@@ -28,28 +29,29 @@ int main(int argc, char *argv[])
 
 	gra_t gra;
 
-	gra.gracz.stan = SPOCZYNEK;
-	gra.wynik = 0;
-
-    gra.schodki[0].pozycja.x = SCREEN_WIDTH/2 - SZEROKOSC_SCHODKA;
-    gra.schodki[1].pozycja.x = 45;
-    gra.schodki[2].pozycja.x = 12;
-    gra.schodki[3].pozycja.x = 250;
-    gra.schodki[4].pozycja.x = 350;
-    gra.schodki[4].pozycja.y = 67;
-    gra.schodki[3].pozycja.y = 150;
-    gra.schodki[2].pozycja.y = 300;
-    gra.schodki[1].pozycja.y = 453;
-    gra.schodki[0].pozycja.y = 610;
-
     gra.wynik = 0;
+    gra.gracz.stan = SPOCZYNEK;
 
-    gra.schodki[0].nr_w_grze = 0;
-    gra.schodki[1].nr_w_grze = 1;
+    gra.schodki[0] = schodki;
+    gra.schodki[0]->pozycja.x = SCREEN_WIDTH/2 - SZEROKOSC_SCHODKA;
+    gra.schodki[0]->nr_w_grze = 0;
+    gra.schodki[0]->pozycja.y = 610;
+
+    /*   gra.schodki[1].pozycja.x = 45;
+       gra.schodki[2].pozycja.x = 12;
+       gra.schodki[3].pozycja.x = 250;
+       gra.schodki[4].pozycja.x = 350;
+       gra.schodki[4].pozycja.y = 67;
+       gra.schodki[3].pozycja.y = 150;
+       gra.schodki[2].pozycja.y = 300;
+       gra.schodki[1].pozycja.y = 453;
+   */
+
+ /*   gra.schodki[1].nr_w_grze = 1;
     gra.schodki[2].nr_w_grze = 2;
     gra.schodki[3].nr_w_grze = 3;
     gra.schodki[4].nr_w_grze = 4;
-
+*/
     gra.indexAktSchodka = 0;
 
     gra.gracz.pozycja_na_ekranie.x = SCREEN_WIDTH/2-ROZMIAR_GRACZA/2;
@@ -61,6 +63,7 @@ int main(int argc, char *argv[])
 	SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_SOFTWARE);
 
 	LoadTextures(renderer);
+	InitMap(&gra);
 
     SDL_SetRenderDrawColor(renderer, 10, 20, 100, 0);
 

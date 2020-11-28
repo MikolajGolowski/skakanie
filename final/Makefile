@@ -89,8 +89,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/snap/clion/129/bin/cmake/linux/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/snap/clion/129/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -224,6 +224,33 @@ code/kernel/Update.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Niekonczace_sie_skakanie.dir/build.make CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.s
 .PHONY : code/kernel/Update.c.s
 
+code/mapa/Mapa.o: code/mapa/Mapa.c.o
+
+.PHONY : code/mapa/Mapa.o
+
+# target to build an object file
+code/mapa/Mapa.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Niekonczace_sie_skakanie.dir/build.make CMakeFiles/Niekonczace_sie_skakanie.dir/code/mapa/Mapa.c.o
+.PHONY : code/mapa/Mapa.c.o
+
+code/mapa/Mapa.i: code/mapa/Mapa.c.i
+
+.PHONY : code/mapa/Mapa.i
+
+# target to preprocess a source file
+code/mapa/Mapa.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Niekonczace_sie_skakanie.dir/build.make CMakeFiles/Niekonczace_sie_skakanie.dir/code/mapa/Mapa.c.i
+.PHONY : code/mapa/Mapa.c.i
+
+code/mapa/Mapa.s: code/mapa/Mapa.c.s
+
+.PHONY : code/mapa/Mapa.s
+
+# target to generate assembly for a file
+code/mapa/Mapa.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Niekonczace_sie_skakanie.dir/build.make CMakeFiles/Niekonczace_sie_skakanie.dir/code/mapa/Mapa.c.s
+.PHONY : code/mapa/Mapa.c.s
+
 code/rendering/RenderingLayers.o: code/rendering/RenderingLayers.c.o
 
 .PHONY : code/rendering/RenderingLayers.o
@@ -323,6 +350,9 @@ help:
 	@echo "... code/kernel/Update.o"
 	@echo "... code/kernel/Update.i"
 	@echo "... code/kernel/Update.s"
+	@echo "... code/mapa/Mapa.o"
+	@echo "... code/mapa/Mapa.i"
+	@echo "... code/mapa/Mapa.s"
 	@echo "... code/rendering/RenderingLayers.o"
 	@echo "... code/rendering/RenderingLayers.i"
 	@echo "... code/rendering/RenderingLayers.s"

@@ -17,7 +17,7 @@ short Update(gra_t* gra,clock_t uplyw){
 
     //zmiana schodkow wzgledem poycji gracza
     for (int i = 0; i < WIDOCZNE_SCHODKI; ++i) {
-        gra->schodki[i].pozycja.y-=(float)((float)(uplyw*(gra->predkoscWszystkiego))/CLOCKS_PER_SEC);
+        gra->schodki[i]->pozycja.y-=(float)((float)(uplyw*(gra->predkoscWszystkiego))/CLOCKS_PER_SEC);
     }
 
     if(gra->gracz.stan!=SPOCZYNEK){
@@ -29,43 +29,49 @@ short Update(gra_t* gra,clock_t uplyw){
 
     //printf("%d\n",gra->indexAktSchodka);
     //kolizja
-    if(gra->schodki[gra->indexAktSchodka].pozycja.y < gra->gracz.pozycja_na_ekranie.y + ROZMIAR_GRACZA){ //jezeli gracz jest pod akt schodkiem
-        if(pozycjaGraczYPrzedZmiana + ROZMIAR_GRACZA < gra->schodki[gra->indexAktSchodka].pozycja.y
+    if(gra->schodki[gra->indexAktSchodka]->pozycja.y < gra->gracz.pozycja_na_ekranie.y + ROZMIAR_GRACZA){ //jezeli gracz jest pod akt schodkiem
+        if(pozycjaGraczYPrzedZmiana + ROZMIAR_GRACZA < gra->schodki[gra->indexAktSchodka]->pozycja.y
         && gra->gracz.stan == SPADEK){ //jezeli znalazlby sie pod klockiem
-            if(gra->gracz.pozycja_na_ekranie.x + ROZMIAR_GRACZA / 2 >= gra->schodki[gra->indexAktSchodka].pozycja.x
-               && gra->gracz.pozycja_na_ekranie.x + ROZMIAR_GRACZA/2 <= gra->schodki[gra->indexAktSchodka].pozycja.x + SZEROKOSC_SCHODKA){ //jezeliby w niego uderzyl
-                 printf("dosiad %d\n",gra->indexAktSchodka);
-                gra->gracz.pozycja_na_ekranie.y = gra->schodki[gra->indexAktSchodka].pozycja.y - ROZMIAR_GRACZA;
+            if(gra->gracz.pozycja_na_ekranie.x + ROZMIAR_GRACZA / 2 >= gra->schodki[gra->indexAktSchodka]->pozycja.x
+               && gra->gracz.pozycja_na_ekranie.x + ROZMIAR_GRACZA/2 <= gra->schodki[gra->indexAktSchodka]->pozycja.x + SZEROKOSC_SCHODKA){ //jezeliby w niego uderzyl
+           //      printf("dosiad %d\n",gra->indexAktSchodka);
+                gra->gracz.pozycja_na_ekranie.y = gra->schodki[gra->indexAktSchodka]->pozycja.y - ROZMIAR_GRACZA;
                 gra->gracz.stan = SPOCZYNEK;
                 gra->gracz.predkosc_y = 0;
             }else{
                 gra->indexAktSchodka = WczesniejszySchodek(gra->indexAktSchodka);
-                printf("wczesniejszy %d\n",gra->indexAktSchodka);
+            //    printf("wczesniejszy %d\n",gra->indexAktSchodka);
             }
         }
     }else{  // jezeli jest nad akt schodkiem
-        if(gra->schodki[KolejnySchodek(gra->indexAktSchodka)].pozycja.y > gra->gracz.pozycja_na_ekranie.y + ROZMIAR_GRACZA
+        if(gra->schodki[KolejnySchodek(gra->indexAktSchodka)]->pozycja.y > gra->gracz.pozycja_na_ekranie.y + ROZMIAR_GRACZA
         && gra->gracz.stan == SKOK){    //jezeli kolejny schodek jest pod graczem
             gra->indexAktSchodka = KolejnySchodek(gra->indexAktSchodka);
-            printf("kolejny %d\n",gra->indexAktSchodka);
+      //      printf("kolejny %d\n",gra->indexAktSchodka);
         }
     }
     //nadal kolizja
     if(gra->gracz.stan == SPOCZYNEK
-      &&( gra->gracz.pozycja_na_ekranie.x + ROZMIAR_GRACZA / 2 < gra->schodki[gra->indexAktSchodka].pozycja.x
-      || gra->gracz.pozycja_na_ekranie.x + ROZMIAR_GRACZA/2 > gra->schodki[gra->indexAktSchodka].pozycja.x + SZEROKOSC_SCHODKA)){
+      &&( gra->gracz.pozycja_na_ekranie.x + ROZMIAR_GRACZA / 2 < gra->schodki[gra->indexAktSchodka]->pozycja.x
+      || gra->gracz.pozycja_na_ekranie.x + ROZMIAR_GRACZA/2 > gra->schodki[gra->indexAktSchodka]->pozycja.x + SZEROKOSC_SCHODKA)){
         gra->gracz.stan = SPADEK;
-        printf("test %d\n",gra->indexAktSchodka);
+       // printf("test %d\n",gra->indexAktSchodka);
         gra->indexAktSchodka = WczesniejszySchodek(gra->indexAktSchodka);
-        printf("wczesniejszy %d\n",gra->indexAktSchodka);
+       // printf("wczesniejszy %d\n",gra->indexAktSchodka);
     }
 
     //przesuniecie klockow i gracza symulujace przesuwanie sie kamery
-    gra->predkoscWszystkiego = PREDKOSC_PODAZANIA*(gra->schodki[gra->indexAktSchodka].pozycja.y - POZYCJA_GRACZA_Y)/(SCREEN_HEIGHT*2);
+    gra->predkoscWszystkiego = PREDKOSC_PODAZANIA*(gra->schodki[gra->indexAktSchodka]->pozycja.y - POZYCJA_GRACZA_Y)/(SCREEN_HEIGHT*2);
 
     //animacje
     if(gra->gracz.predkosc_x > 0)
         gra->gracz.kierunek = PRAWO;
     else if (gra->gracz.predkosc_x < 0)
         gra->gracz.kierunek = LEWO;
+
+    //liczenie wyniku i generowanie nowych schodkow
+    if(gra->wynik < gra->schodki[gra->indexAktSchodka]->nr_w_grze){
+        gra->wynik = gra->schodki[gra->indexAktSchodka]->nr_w_grze;
+        NastSchodek();
+    }
 }

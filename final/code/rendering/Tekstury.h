@@ -13,6 +13,7 @@
 SDL_Texture* tekstura_gracz_stoi;
 SDL_Texture* schodek_tekstura;
 SDL_Texture* tekstura_gracz_skok;
+    SDL_Texture* tekstura_gracz_spada;
 
 bool LoadTextures(SDL_Renderer* renderer);
 

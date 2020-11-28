@@ -8,11 +8,15 @@
 #define SILA_NOG_GACZA 2500
 #define PREDKOSC_PODAZANIA 1000
 
+#define ILE_SCHODKOW_WYGENEROWAC_NA_POCZATKU 10
+#define ODSTEP_MIEDZY_SCHODKAMI 150
+#define LOSOWOSC_ODSTEPU_MIEDZY_SCHODKAMI 20
+
 #define LEWO 0
 #define PRAWO 1
 
 #define WIDOCZNE_SCHODKI 5
-#define SCHODKI_DO_WYGRANIA 4
+#define SCHODKI_DO_WYGRANIA 100000
 #define ROZMIAR_GRACZA 75
 #define SZEROKOSC_SCHODKA 100
 #define WYSOKOSC_SCHODKA 75
@@ -58,7 +62,7 @@ typedef struct {
 schodek_t;
 
 typedef struct {
-    schodek_t schodki[WIDOCZNE_SCHODKI];
+    schodek_t* schodki[WIDOCZNE_SCHODKI];
     gracz_t gracz;
     int wynik;
     int seed;

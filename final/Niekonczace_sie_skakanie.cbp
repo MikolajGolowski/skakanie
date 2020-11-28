@@ -85,6 +85,12 @@
 		<Unit filename="/home/mikolaj/C/final/code/kernel/Update.h">
 			<Option target="Niekonczace_sie_skakanie"/>
 		</Unit>
+		<Unit filename="/home/mikolaj/C/final/code/mapa/Mapa.c">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
+		<Unit filename="/home/mikolaj/C/final/code/mapa/Mapa.h">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
 		<Unit filename="/home/mikolaj/C/final/code/rendering/RenderingLayers.c">
 			<Option target="Niekonczace_sie_skakanie"/>
 		</Unit>
@@ -97,10 +103,10 @@
 		<Unit filename="/home/mikolaj/C/final/code/rendering/Tekstury.h">
 			<Option target="Niekonczace_sie_skakanie"/>
 		</Unit>
-		<Unit filename="/home/mikolaj/C/final/code/sterowanie/KontrolaGracza.c">
+		<Unit filename="/home/mikolaj/C/final/code/sterowanie/Sterowanie.c">
 			<Option target="Niekonczace_sie_skakanie"/>
 		</Unit>
-		<Unit filename="/home/mikolaj/C/final/code/sterowanie/KontrolaGracza.h">
+		<Unit filename="/home/mikolaj/C/final/code/sterowanie/Sterowanie.h">
 			<Option target="Niekonczace_sie_skakanie"/>
 		</Unit>
 		<Unit filename="/home/mikolaj/C/final/CMakeLists.txt">
