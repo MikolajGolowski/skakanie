@@ -10,7 +10,22 @@ bool RenderPlayer(SDL_Renderer* renderer, gracz_t *gracz){
     playerPos.x = gracz->pozycja_na_ekranie.x;
     playerPos.y = gracz->pozycja_na_ekranie.y;
   //  printf("%d\n",playerPos.x);
-    SDL_RenderCopy(renderer, gracz_tekstura,NULL, &playerPos);
+    //animacja gracza
+    if(gracz->stan==SPOCZYNEK){
+        if(gracz->kierunek == PRAWO)
+            SDL_RenderCopy(renderer, tekstura_gracz_stoi, NULL, &playerPos);
+        else
+            SDL_RenderCopyEx(renderer, tekstura_gracz_stoi, NULL, &playerPos, 0, NULL, SDL_FLIP_HORIZONTAL);
+    }
+    else if (gracz->stan == SKOK){
+        if(gracz->kierunek == PRAWO)
+            SDL_RenderCopy(renderer, tekstura_gracz_skok, NULL, &playerPos);
+        else
+            SDL_RenderCopyEx(renderer, tekstura_gracz_skok, NULL, &playerPos, 0, NULL, SDL_FLIP_HORIZONTAL);
+    }
+    else             SDL_RenderCopy(renderer, tekstura_gracz_stoi, NULL, &playerPos);
+
+
     return true;
 }
 

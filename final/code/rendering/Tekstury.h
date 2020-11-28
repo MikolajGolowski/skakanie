@@ -10,8 +10,9 @@
 #include "SDL_image.h"
 #include "SDL.h"
 
-SDL_Texture* gracz_tekstura;
+SDL_Texture* tekstura_gracz_stoi;
 SDL_Texture* schodek_tekstura;
+SDL_Texture* tekstura_gracz_skok;
 
 bool LoadTextures(SDL_Renderer* renderer);
 

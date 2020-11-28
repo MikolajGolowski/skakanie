@@ -8,6 +8,9 @@
 #define SILA_NOG_GACZA 2500
 #define PREDKOSC_PODAZANIA 1000
 
+#define LEWO 0
+#define PRAWO 1
+
 #define WIDOCZNE_SCHODKI 5
 #define SCHODKI_DO_WYGRANIA 4
 #define ROZMIAR_GRACZA 75
@@ -41,7 +44,7 @@ typedef struct {
     pozycja_t pozycja_w_grze;
     int predkosc_x, predkosc_y;
     short stan;
-
+    short kierunek;
 }
 gracz_t;
 

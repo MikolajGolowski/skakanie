@@ -60,6 +60,12 @@ short Update(gra_t* gra,clock_t uplyw){
         printf("wczesniejszy %d\n",gra->indexAktSchodka);
     }
 
-    gra->predkoscWszystkiego = PREDKOSC_PODAZANIA*
-            (gra->schodki[gra->indexAktSchodka].pozycja.y - POZYCJA_GRACZA_Y)/(SCREEN_HEIGHT*2);
+    //przesuniecie klockow i gracza symulujace przesuwanie sie kamery
+    gra->predkoscWszystkiego = PREDKOSC_PODAZANIA*(gra->schodki[gra->indexAktSchodka].pozycja.y - POZYCJA_GRACZA_Y)/(SCREEN_HEIGHT*2);
+
+    //animacje
+    if(gra->gracz.predkosc_x > 0)
+        gra->gracz.kierunek = PRAWO;
+    else if (gra->gracz.predkosc_x < 0)
+        gra->gracz.kierunek = LEWO;
 }
