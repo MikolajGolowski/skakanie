@@ -2,11 +2,12 @@
 #define ENGINE_H
 
 #define WINDOWS 0
-#define POZYCJA_GRACZA_Y 400
+#define POZYCJA_GRACZA_Y 500
 #define GRAWITACJA 1
 #define WAGA_GRACZA 8
-#define SILA_NOG_GACZA 2500
-#define PREDKOSC_PODAZANIA 1000
+#define SILA_NOG_GACZA 2800
+#define PREDKOSC_X_GRACZA 800
+#define PREDKOSC_PODAZANIA 3000
 
 #define ILE_SCHODKOW_WYGENEROWAC_NA_POCZATKU 10
 #define ODSTEP_MIEDZY_SCHODKAMI 150
@@ -15,7 +16,7 @@
 #define LEWO 0
 #define PRAWO 1
 
-#define WIDOCZNE_SCHODKI 5
+#define WIDOCZNE_SCHODKI 16
 #define SCHODKI_DO_WYGRANIA 100000
 #define ROZMIAR_GRACZA 75
 #define SZEROKOSC_SCHODKA 100
@@ -36,6 +37,9 @@
 #define OGNISTY 2
 #define CHMURA 3
 
+
+float pozycja_startowa_gracza_y;
+float pozycja_startowa_gracza_x;
 
 
 typedef struct{
@@ -58,6 +62,7 @@ typedef struct {
     short wyglad;
     int nr_w_grze;
     short ruszaSie;
+    pozycja_t relacjaWzgledemWczesniejszego;
 }
 schodek_t;
 
@@ -71,8 +76,11 @@ typedef struct {
 }
 gra_t;
 
+void InitEngine();
 short KolejnySchodek(short schodekAkt);
 short WczesniejszySchodek(short schodekAkt);
+short NajwyzszySchodek(gra_t* gra);
+short NajnizszySchodek(gra_t* gra);
 
 #endif //NIEKONCZACE_SIE_SKAKANIE_ENGINE_H
 

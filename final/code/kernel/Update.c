@@ -69,9 +69,23 @@ short Update(gra_t* gra,clock_t uplyw){
     else if (gra->gracz.predkosc_x < 0)
         gra->gracz.kierunek = LEWO;
 
-    //liczenie wyniku i generowanie nowych schodkow
+    //liczenie wyniku
     if(gra->wynik < gra->schodki[gra->indexAktSchodka]->nr_w_grze){
         gra->wynik = gra->schodki[gra->indexAktSchodka]->nr_w_grze;
-        NastSchodek();
+        printf("WYNIK = %d\n",gra->wynik);
     }
+
+    //printf("POS: %f\n",(gra->schodki[NajnizszySchodek(gra)]->pozycja.y));
+    //printf("AKU: %d\n",SCREEN_HEIGHT + 300);
+    //generowanie nowych schodkow
+    if((gra->schodki[NajnizszySchodek(gra)]->pozycja.y) > (SCREEN_HEIGHT + 300)){     //jezeli schodek jest nizej niz 500 pod ekranem to usun go i dodaj na gorze nowy
+        NastSchodek();
+        printf("ID NAJNIZSZEGO %d\n",gra->schodki[NajnizszySchodek(gra)]->nr_w_grze);
+        printf("ID NOWEGO %d\n",schodki[wygenerowane_schodki-1].nr_w_grze);
+        gra->schodki[NajnizszySchodek(gra)] += WIDOCZNE_SCHODKI;
+        printf("ID NOWEGO %d\n",gra->schodki[NajwyzszySchodek(gra)]->nr_w_grze);
+        printf("ZMIANA\n");
+    }
+
+    //if()
 }

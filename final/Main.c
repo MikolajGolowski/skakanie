@@ -16,7 +16,9 @@
 
 int main(int argc, char *argv[])
 {
+    InitEngine();
 	SDL_Init(SDL_INIT_EVERYTHING);
+    InitRender();
 
 	SDL_Window *window = SDL_CreateWindow(
 		"Skakanie",
@@ -29,13 +31,17 @@ int main(int argc, char *argv[])
 
 	gra_t gra;
 
+    InitMap(&gra);
+
+    gra.gracz.pozycja_na_ekranie.x = pozycja_startowa_gracza_x;
+    gra.gracz.pozycja_na_ekranie.y = pozycja_startowa_gracza_y;
+    gra.predkoscWszystkiego = 0;
+    gra.gracz.predkosc_x = 0;
+    gra.gracz.predkosc_y = 0;
     gra.wynik = 0;
     gra.gracz.stan = SPOCZYNEK;
 
-    gra.schodki[0] = schodki;
-    gra.schodki[0]->pozycja.x = SCREEN_WIDTH/2 - SZEROKOSC_SCHODKA;
-    gra.schodki[0]->nr_w_grze = 0;
-    gra.schodki[0]->pozycja.y = 610;
+ //   gra.schodki[0] = schodki;
 
     /*   gra.schodki[1].pozycja.x = 45;
        gra.schodki[2].pozycja.x = 12;
@@ -52,10 +58,10 @@ int main(int argc, char *argv[])
     gra.schodki[3].nr_w_grze = 3;
     gra.schodki[4].nr_w_grze = 4;
 */
-    gra.indexAktSchodka = 0;
+  //  gra.indexAktSchodka = 0;
 
-    gra.gracz.pozycja_na_ekranie.x = SCREEN_WIDTH/2-ROZMIAR_GRACZA/2;
-    gra.gracz.pozycja_na_ekranie.y = SCREEN_HEIGHT-100-ROZMIAR_GRACZA;
+  //  gra.gracz.pozycja_na_ekranie.x = SCREEN_WIDTH/2-ROZMIAR_GRACZA/2;
+  //  gra.gracz.pozycja_na_ekranie.y = SCREEN_HEIGHT-100-ROZMIAR_GRACZA;
     gra.gracz.predkosc_y = 0;
     gra.gracz.predkosc_x = 0;
 
@@ -63,7 +69,6 @@ int main(int argc, char *argv[])
 	SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_SOFTWARE);
 
 	LoadTextures(renderer);
-	InitMap(&gra);
 
     SDL_SetRenderDrawColor(renderer, 10, 20, 100, 0);
 
@@ -74,10 +79,7 @@ int main(int argc, char *argv[])
 
     while(1){
         poczatek = clock();
-     /*   if(gra.schodki[1].pozycja.x<500)
-            gra.schodki[1].pozycja.x++;
-        else
-            gra.schodki[1].pozycja.x=100;*/
+
         if(InputZKlawiatury(&gra.gracz) == -1){
             break;
         }
@@ -100,6 +102,9 @@ int main(int argc, char *argv[])
 
 	//SDL_Delay(30000);
 
+    for (int i = 0; i < WIDOCZNE_SCHODKI; ++i) {
+        printf("%d %f\n",i,gra.schodki[i]->pozycja.x);
+    }
 	SDL_DestroyWindow(window);
 	SDL_Quit();
 

@@ -8,6 +8,7 @@
 #include "Tekstury.h"
 
 //bool DodajTextureDoWarstwy(int warstwa, SDL_Texture *tekstura);
+void InitRender();
 bool RenderPlayer(SDL_Renderer* renderer, gracz_t *gracz);
 bool RenderSchodki(SDL_Renderer* renderer, schodek_t* schodek[]);
 bool RenderTlo(SDL_Renderer* renderer, gra_t* gra);

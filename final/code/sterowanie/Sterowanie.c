@@ -9,11 +9,11 @@ short InputZKlawiatury(gracz_t* gracz){
         case SDL_KEYDOWN:
             switch (event.key.keysym.sym) {
                 case SDLK_LEFT:
-                    gracz->predkosc_x = -500;
+                    gracz->predkosc_x = -PREDKOSC_X_GRACZA;
                    // printf("WCISNIETO LEWY");
                     break;
                 case SDLK_RIGHT:
-                    gracz->predkosc_x = 500;
+                    gracz->predkosc_x = PREDKOSC_X_GRACZA;
                     //printf("WCISNIETO PRAWY");
                     break;
                 case SDLK_ESCAPE:

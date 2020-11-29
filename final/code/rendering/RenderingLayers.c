@@ -1,14 +1,22 @@
 #include "RenderingLayers.h"
 
 
-SDL_Rect playerPos = {SCREEN_WIDTH/2-ROZMIAR_GRACZA/2,
-                      SCREEN_HEIGHT-100-ROZMIAR_GRACZA,
-                      ROZMIAR_GRACZA,ROZMIAR_GRACZA};
+SDL_Rect playerPos;
 
+void InitRender(){
+    playerPos.x = pozycja_startowa_gracza_x;
+    playerPos.y = pozycja_startowa_gracza_y,
+    playerPos.w = ROZMIAR_GRACZA;
+    playerPos.h = ROZMIAR_GRACZA;
+    printf("y %f\n",pozycja_startowa_gracza_y);
+    printf("x %f\n",pozycja_startowa_gracza_x);
+}
 
 bool RenderPlayer(SDL_Renderer* renderer, gracz_t *gracz){
     playerPos.x = gracz->pozycja_na_ekranie.x;
     playerPos.y = gracz->pozycja_na_ekranie.y;
+   // printf("y %f\n",gracz->pozycja_na_ekranie.y);
+   // printf("x %f\n",gracz->pozycja_na_ekranie.x);
   //  printf("%d\n",playerPos.x);
     //animacja gracza
     if(gracz->stan==SPOCZYNEK){

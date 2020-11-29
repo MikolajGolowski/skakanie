@@ -56,6 +56,7 @@ CMakeFiles/Niekonczace_sie_skakanie.dir/Main.c.o: /usr/include/SDL2/close_code.h
 
 CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Engine.c.o: code/kernel/Engine.c
 CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Engine.c.o: code/kernel/Engine.h
+CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Engine.c.o: code/mapa/Mapa.h
 
 CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.o: code/kernel/Engine.h
 CMakeFiles/Niekonczace_sie_skakanie.dir/code/kernel/Update.c.o: code/kernel/Update.c
