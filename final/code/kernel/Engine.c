@@ -23,9 +23,14 @@ short NajnizszySchodek(gra_t* gra){     //to jest do przerobienia na szybsze
     int min = gra->schodki[0]->nr_w_grze;
     int index = 0;
     for (int i = 0; i < WIDOCZNE_SCHODKI; ++i) {
-        if(gra->schodki[i]->nr_w_grze < min)
+      //  printf("%d, %d\n",gra->schodki[i]->nr_w_grze,min);
+        if(gra->schodki[i]->nr_w_grze < min){
+        //    printf("SDFGSDFSDFDS\n");
             index = i;
+            min = gra->schodki[i]->nr_w_grze;
+        }
     }
+    //printf("min %d,%d\n",index,min);
     return index;
 }
 

@@ -80,11 +80,11 @@ int main(int argc, char *argv[])
     while(1){
         poczatek = clock();
 
-        if(InputZKlawiatury(&gra.gracz) == -1){
+        if(InputZKlawiatury(&gra.gracz) == -1 | Update(&gra,clock() - uplyw) == -1){
             break;
         }
        // printf("%ld\n",CLOCKS_PER_SEC/(clock()-uplyw));       //ILOSC FPS
-        Update(&gra,clock() - uplyw);
+
 
         uplyw = clock();
 	    RenderWszystko(renderer, &gra);
@@ -102,9 +102,9 @@ int main(int argc, char *argv[])
 
 	//SDL_Delay(30000);
 
-    for (int i = 0; i < WIDOCZNE_SCHODKI; ++i) {
+   /* for (int i = 0; i < WIDOCZNE_SCHODKI; ++i) {
         printf("%d %f\n",i,gra.schodki[i]->pozycja.x);
-    }
+    }*/
 	SDL_DestroyWindow(window);
 	SDL_Quit();
 

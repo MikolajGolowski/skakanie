@@ -6,6 +6,36 @@
 
 #IncludeRegexTransform: 
 
+/home/mikolaj/C/final/Main.c
+SDL.h
+/home/mikolaj/C/final/SDL.h
+SDL_image.h
+/home/mikolaj/C/final/SDL_image.h
+code/kernel/Engine.h
+/home/mikolaj/C/final/code/kernel/Engine.h
+code/rendering/RenderingLayers.h
+/home/mikolaj/C/final/code/rendering/RenderingLayers.h
+code/rendering/Tekstury.h
+/home/mikolaj/C/final/code/rendering/Tekstury.h
+code/sterowanie/Sterowanie.h
+/home/mikolaj/C/final/code/sterowanie/Sterowanie.h
+code/kernel/Update.h
+/home/mikolaj/C/final/code/kernel/Update.h
+code/mapa/Mapa.h
+/home/mikolaj/C/final/code/mapa/Mapa.h
+time.h
+-
+Windows.h
+-
+unistd.h
+-
+
+/home/mikolaj/C/final/code/kernel/Engine.c
+Engine.h
+/home/mikolaj/C/final/code/kernel/Engine.h
+../mapa/Mapa.h
+/home/mikolaj/C/final/code/mapa/Mapa.h
+
 /home/mikolaj/C/final/code/kernel/Engine.h
 
 /home/mikolaj/C/final/code/kernel/Update.c
@@ -30,6 +60,10 @@ SDL_image.h
 ../mapa/Mapa.h
 /home/mikolaj/C/final/code/mapa/Mapa.h
 
+/home/mikolaj/C/final/code/mapa/Mapa.c
+Mapa.h
+/home/mikolaj/C/final/code/mapa/Mapa.h
+
 /home/mikolaj/C/final/code/mapa/Mapa.h
 ../kernel/Engine.h
 /home/mikolaj/C/final/code/kernel/Engine.h
@@ -40,6 +74,26 @@ stdlib.h
 time.h
 -
 
+/home/mikolaj/C/final/code/rendering/RenderingLayers.c
+RenderingLayers.h
+/home/mikolaj/C/final/code/rendering/RenderingLayers.h
+
+/home/mikolaj/C/final/code/rendering/RenderingLayers.h
+SDL.h
+/home/mikolaj/C/final/code/rendering/SDL.h
+SDL_image.h
+/home/mikolaj/C/final/code/rendering/SDL_image.h
+stdbool.h
+-
+../kernel/Engine.h
+/home/mikolaj/C/final/code/kernel/Engine.h
+Tekstury.h
+/home/mikolaj/C/final/code/rendering/Tekstury.h
+
+/home/mikolaj/C/final/code/rendering/Tekstury.c
+Tekstury.h
+/home/mikolaj/C/final/code/rendering/Tekstury.h
+
 /home/mikolaj/C/final/code/rendering/Tekstury.h
 stdbool.h
 -
@@ -47,6 +101,16 @@ SDL_image.h
 /home/mikolaj/C/final/code/rendering/SDL_image.h
 SDL.h
 /home/mikolaj/C/final/code/rendering/SDL.h
+
+/home/mikolaj/C/final/code/sterowanie/Sterowanie.c
+Sterowanie.h
+/home/mikolaj/C/final/code/sterowanie/Sterowanie.h
+SDL.h
+/home/mikolaj/C/final/code/sterowanie/SDL.h
+
+/home/mikolaj/C/final/code/sterowanie/Sterowanie.h
+../kernel/Engine.h
+/home/mikolaj/C/final/code/kernel/Engine.h
 
 /usr/include/SDL2/SDL.h
 SDL_main.h
