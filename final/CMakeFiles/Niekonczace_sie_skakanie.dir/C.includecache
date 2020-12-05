@@ -9,6 +9,8 @@
 /home/mikolaj/C/final/Main.c
 SDL.h
 /home/mikolaj/C/final/SDL.h
+string.h
+-
 SDL_image.h
 /home/mikolaj/C/final/SDL_image.h
 code/kernel/Engine.h

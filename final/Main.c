@@ -1,4 +1,5 @@
 #include "SDL.h"
+#include <string.h>
 #include "SDL_image.h"
 #include "code/kernel/Engine.h"
 #include "code/rendering/RenderingLayers.h"
@@ -16,6 +17,14 @@
 
 int main(int argc, char *argv[])
 {
+    if(argc != 1){
+        if(strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0){
+            printf("Gra \"Niekonczace sie skakanie\" polega na wskoczeniu na jak najwyzszy schodek na losowo generowanej mapie.\n"
+                   "STEROWANIE:\nstrzalka w lewo - ruch w lewo\nstrzalka w prawo - ruch w prawo\nspacja - skok\n");
+        }
+        return 0;
+    }
+
     InitEngine();
 	SDL_Init(SDL_INIT_EVERYTHING);
     InitRender();
