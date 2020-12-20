@@ -1,4 +1,0 @@
-/snap/clion/137/bin/cmake/linux/bin/cmake -G "CodeBlocks - Unix Makefiles" /home/mikolaj/C/final
--- Configuring done
--- Generating done
--- Build files have been written to: /home/mikolaj/C/final
