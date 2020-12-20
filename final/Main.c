@@ -14,8 +14,9 @@ int main(int argc, char *argv[])
     bool loadGame = false;
     if(argc == 2){
         if(strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0){
-            printf("\nGra \"Niekonczace sie skakanie\" polega na wskoczeniu na jak najwyzszy schodek na losowo generowanej mapie.\n"
-                   "STEROWANIE:\nstrzalka w lewo - ruch w lewo\nstrzalka w prawo - ruch w prawo\nspacja - skok\nklawisz s - zapis stanu gry\n\n");
+            printf("\nGra \"Niekonczace sie skakanie\" polega na wskoczeniu na jak najwyzszy schodek na losowo generowanej mapie.\n\n"
+                   "STEROWANIE:\nstrzalka w lewo - ruch w lewo\nstrzalka w prawo - ruch w prawo\nspacja - skok\nklawisz s - zapis stanu gry do pliku savegame.nss\nescape - wyjscie z gry\n\n"
+                   "Aby wczytać zapisaną grę należy jako argument podać ścieżkę do pliku z zapisem, np. ./Niekonczace_sie_skakanie savegame.nss wczytuje zapis z pliku savegame.nss\n\n");
             return 0;
         }
         else if(fopen(argv[1],"r")!=NULL){
@@ -44,7 +45,8 @@ int main(int argc, char *argv[])
 
 	gra_t gra;
 
-    InitMap(&gra);
+	if(!loadGame)
+        InitMap(&gra);
 
     gra.gracz.pozycja_na_ekranie.x = pozycja_startowa_gracza_x;
     gra.gracz.pozycja_na_ekranie.y = pozycja_startowa_gracza_y;
@@ -79,6 +81,10 @@ int main(int argc, char *argv[])
 	    RenderWszystko(renderer, &gra);
 
         SDL_RenderPresent(renderer);
+
+        if(gra.schodki[gra.indexAktSchodka]->nr_w_grze == SCHODKI_DO_WYGRANIA){
+            printf("GRATULACJE! UDAŁO CI SIĘ WSPIĄĆ NA SAM SZCZYT I UKOŃCZYĆ GRĘ!\n");
+        }
 	}
 
     printf("Koniec gry!\n");

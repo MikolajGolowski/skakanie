@@ -1,5 +1,5 @@
 #include "Engine.h"
-#include "../mapa/Mapa.h"
+
 void InitEngine(){
     pozycja_startowa_gracza_y = SCREEN_HEIGHT-100-ROZMIAR_GRACZA;
     pozycja_startowa_gracza_x = SCREEN_WIDTH/2-ROZMIAR_GRACZA/2;
@@ -34,6 +34,16 @@ short NajnizszySchodek(gra_t* gra){     //to jest do przerobienia na szybsze
     return index;
 }
 
+int NajnizszySchodekNr(gra_t* gra){
+    int min = gra->schodki[0]->nr_w_grze;
+    for (int i = 0; i < WIDOCZNE_SCHODKI; ++i) {
+        if(gra->schodki[i]->nr_w_grze < min){
+            min = gra->schodki[i]->nr_w_grze;
+        }
+    }
+    return min;
+}
+
 short NajwyzszySchodek(gra_t* gra){   //to mozna przerobic na szybsze
     int max = gra->schodki[0]->nr_w_grze;
     int index = 0;
@@ -42,11 +52,4 @@ short NajwyzszySchodek(gra_t* gra){   //to mozna przerobic na szybsze
             index = i;
     }
     return index;
-}
-
-short JestLiczba(char c){
-    if(c == '1' || c == '2' || c == '3' || c == '4' || c == '5' || c == '6' || c == '7' || c == '8' ||
-            c == '9' || c == '0' || c == '.')
-        return 1;
-    return 0;
 }

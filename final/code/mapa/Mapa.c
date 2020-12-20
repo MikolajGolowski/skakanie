@@ -31,7 +31,7 @@ void InitMap(gra_t *gra){
 void NastSchodek(){
     //if(wygenerowane_schodki == SCHODKI_DO_WYGRANIA)
     //    return;
-    schodki[wygenerowane_schodki].nr_w_grze = wygenerowane_schodki;
+    schodki[wygenerowane_schodki].nr_w_grze = schodki[wygenerowane_schodki-1].nr_w_grze + 1;
     schodki[wygenerowane_schodki].pozycja.x = rand()%(SCREEN_WIDTH - SZEROKOSC_SCHODKA);
     schodki[wygenerowane_schodki].relacjaWzgledemWczesniejszego.y = (rand()%LOSOWOSC_ODSTEPU_MIEDZY_SCHODKAMI) - ODSTEP_MIEDZY_SCHODKAMI;
     schodki[wygenerowane_schodki].pozycja.y = schodki[wygenerowane_schodki-1].pozycja.y + schodki[wygenerowane_schodki].relacjaWzgledemWczesniejszego.y;

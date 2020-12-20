@@ -6,8 +6,8 @@ int saveGame(gra_t* gra){
         FILE *f;
         char *buf[500];
         f = fopen(SAVEGAME, "w");
-        //stan gracza
-        sprintf(buf, "%d", gra->gracz.stan);
+        //akt schodek
+        sprintf(buf, "%d", gra->indexAktSchodka);
         fputs(buf, f);
         fputs(" ", f);
         //zapis wyniku
@@ -15,7 +15,7 @@ int saveGame(gra_t* gra){
         fputs(buf, f);
         fputs(" ", f);
         //najnizszy schodek wynik
-        sprintf(buf, "%d", NajnizszySchodek(gra));
+        sprintf(buf, "%d", NajnizszySchodekNr(gra));
         fputs(buf, f);
         fputs(" ", f);
         //x gracza
@@ -26,18 +26,26 @@ int saveGame(gra_t* gra){
         gcvt(gra->gracz.pozycja_na_ekranie.y, 5, buf);
         fputs(buf, f);
         fputs(" ", f);
+        //ile schodkow wygenerowano
+        sprintf(buf, "%d", wygenerowane_schodki);
+        fputs(buf, f);
+        fputs(" ", f);
         //schodki
-        while (wygenerowane_schodki <= WIDOCZNE_SCHODKI) {
-            NastSchodek();
-        }
-        for (int i = 0; i < WIDOCZNE_SCHODKI; ++i) {
+        for (int i = NajnizszySchodekNr(gra); i < NajnizszySchodekNr(gra) + WIDOCZNE_SCHODKI; ++i) {
             //schodki[i+gra->wynik].nr_w_grze = i+gra->wynik;
+          //  printf("%d, %f\n",schodki[i].nr_w_grze,schodki[i].pozycja.y);
             //x schodka
-            gcvt(gra->schodki[i]->pozycja.x, 5, buf);
+            gcvt(schodki[i].pozycja.x, 5, buf);
             fputs(buf, f);
             fputs(" ", f);
             //y schodka
-            gcvt(gra->schodki[i]->pozycja.y, 5, buf);
+            gcvt(schodki[i].pozycja.y, 5, buf);
+            fputs(buf, f);
+            fputs(" ", f);
+        }
+        //indexy z wskaznikow z gry
+        for (int i = 0; i < WIDOCZNE_SCHODKI; ++i) {
+            sprintf(buf, "%d", gra->schodki[i]->nr_w_grze);
             fputs(buf, f);
             fputs(" ", f);
         }
@@ -49,6 +57,7 @@ int saveGame(gra_t* gra){
 }
 
 int loadSavegame(gra_t* gra, char loc[]){
+    gra->gracz.stan = SPOCZYNEK;
     FILE* f;
     char t[1000000];
     f = fopen(loc,"r");
@@ -63,24 +72,23 @@ int loadSavegame(gra_t* gra, char loc[]){
             l++;
         }
     }
-    gra->gracz.stan = e[0];
-    if(gra->gracz.stan!= SPOCZYNEK)
-        printf("ZŁY ZAPIS GRY!\n");
+    gra->indexAktSchodka = e[0];
     gra->wynik = e[1];
     int w = e[2];
     gra->gracz.pozycja_na_ekranie.x = e[3];
-    gra->gracz.pozycja_na_ekranie.y = e[4];
-
+    gra->gracz.pozycja_na_ekranie.y = e[4] - 2;
+    wygenerowane_schodki = e[5];
     for (int i = 0; i < WIDOCZNE_SCHODKI; ++i) {
-        schodki[i].pozycja.x = e[(i*2)+5];
-        schodki[i].pozycja.y = e[(i*2) + 6];
-        schodki[i].nr_w_grze += w;
-        if(schodki[i].nr_w_grze == gra->wynik){
-            gra->indexAktSchodka = i;
-        }
+        schodki[i+w].pozycja.x = e[(i * 2) + 6];
+        schodki[i+w].pozycja.y = e[(i * 2) + 7];
+        schodki[i+w].nr_w_grze = i+w;
+    }
+    for (int i = 0; i < WIDOCZNE_SCHODKI; ++i) {
+        gra->schodki[i] = &schodki[(int)e[i+ 2*WIDOCZNE_SCHODKI + 6]];
     }
 
     fclose(f);
+    printf("Pomyślnie wczytano zapis gry z pliku %s\n", loc);
     return 0;
 }
 

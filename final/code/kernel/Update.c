@@ -90,8 +90,8 @@ short Update(gra_t* gra,clock_t uplyw){
 
     //konczenie gry
     if(gra->schodki[NajnizszySchodek(gra)]->pozycja.y < gra->gracz.pozycja_na_ekranie.y + ROZMIAR_GRACZA - 1000){
-        printf("najn y %f\n",gra->schodki[NajnizszySchodek(gra)]->pozycja.y);
-        printf("gracz y %f\n",gra->gracz.pozycja_na_ekranie.y);
+    //    printf("najn y %f\n",gra->schodki[NajnizszySchodek(gra)]->pozycja.y);
+     //   printf("gracz y %f\n",gra->gracz.pozycja_na_ekranie.y);
         return -1;
     }
 }

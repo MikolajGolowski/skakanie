@@ -1,7 +1,6 @@
 #ifndef ENGINE_H
 #define ENGINE_H
 
-#define WINDOWS 0
 #define POZYCJA_GRACZA_Y 500
 #define GRAWITACJA 10
 #define WAGA_GRACZA 80
@@ -9,7 +8,6 @@
 #define PREDKOSC_X_GRACZA 800
 #define PREDKOSC_PODAZANIA 5000
 #define ZMIANA_KLOCKA 500   //jezeli klocek jest o tyle pod ekranem to go skasuj
-#define ILE_SCHODKOW_WYGENEROWAC_NA_POCZATKU 10
 #define ODSTEP_MIEDZY_SCHODKAMI 150
 #define LOSOWOSC_ODSTEPU_MIEDZY_SCHODKAMI 20
 
@@ -19,7 +17,7 @@
 #define SAVEGAME "savegame.nss"
 
 #define WIDOCZNE_SCHODKI 16
-#define SCHODKI_DO_WYGRANIA 100000
+#define SCHODKI_DO_WYGRANIA 10000
 #define ROZMIAR_GRACZA 75
 #define SZEROKOSC_SCHODKA 100
 #define WYSOKOSC_SCHODKA 75
@@ -30,7 +28,6 @@
 //stan gracza
 #define SKOK 0
 #define SPOCZYNEK 1
-#define ODBICIE 3
 #define SPADEK 2
 
 //wyglad schodka
@@ -84,6 +81,7 @@ short WczesniejszySchodek(short schodekAkt);
 short NajwyzszySchodek(gra_t* gra);
 short NajnizszySchodek(gra_t* gra);
 short JestLiczba(char c);
+int NajnizszySchodekNr(gra_t* gra);
 
 #endif //NIEKONCZACE_SIE_SKAKANIE_ENGINE_H
 

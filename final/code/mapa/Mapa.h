@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-schodek_t schodki[SCHODKI_DO_WYGRANIA];
+schodek_t schodki[SCHODKI_DO_WYGRANIA+WIDOCZNE_SCHODKI];
 int wygenerowane_schodki;
 
 void InitMap(gra_t* gra);
