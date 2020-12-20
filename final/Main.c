@@ -11,11 +11,21 @@
 
 int main(int argc, char *argv[])
 {
-    if(argc != 1){
+    bool loadGame = false;
+    if(argc == 2){
         if(strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0){
             printf("\nGra \"Niekonczace sie skakanie\" polega na wskoczeniu na jak najwyzszy schodek na losowo generowanej mapie.\n"
-                   "STEROWANIE:\nstrzalka w lewo - ruch w lewo\nstrzalka w prawo - ruch w prawo\nspacja - skok\n");
+                   "STEROWANIE:\nstrzalka w lewo - ruch w lewo\nstrzalka w prawo - ruch w prawo\nspacja - skok\nklawisz s - zapis stanu gry\n\n");
+            return 0;
         }
+        else if(fopen(argv[1],"r")!=NULL){
+            loadGame = true;
+        }else{
+            printf("Nie znaleziono zapisu gry! Sprawdz -h lub --help\n");
+            return 0;
+        }
+    }else if(argc > 2){
+        printf("Program przyjmuje tylko jeden argument.\n Wpisz -h lub --help by uzyskac pomoc\n");
         return 0;
     }
 
@@ -44,27 +54,6 @@ int main(int argc, char *argv[])
     gra.wynik = 0;
     gra.gracz.stan = SPOCZYNEK;
 
- //   gra.schodki[0] = schodki;
-
-    /*   gra.schodki[1].pozycja.x = 45;
-       gra.schodki[2].pozycja.x = 12;
-       gra.schodki[3].pozycja.x = 250;
-       gra.schodki[4].pozycja.x = 350;
-       gra.schodki[4].pozycja.y = 67;
-       gra.schodki[3].pozycja.y = 150;
-       gra.schodki[2].pozycja.y = 300;
-       gra.schodki[1].pozycja.y = 453;
-   */
-
- /*   gra.schodki[1].nr_w_grze = 1;
-    gra.schodki[2].nr_w_grze = 2;
-    gra.schodki[3].nr_w_grze = 3;
-    gra.schodki[4].nr_w_grze = 4;
-*/
-  //  gra.indexAktSchodka = 0;
-
-  //  gra.gracz.pozycja_na_ekranie.x = SCREEN_WIDTH/2-ROZMIAR_GRACZA/2;
-  //  gra.gracz.pozycja_na_ekranie.y = SCREEN_HEIGHT-100-ROZMIAR_GRACZA;
     gra.gracz.predkosc_y = 0;
     gra.gracz.predkosc_x = 0;
 
@@ -73,41 +62,26 @@ int main(int argc, char *argv[])
 
 	LoadTextures(renderer);
 
-    SDL_SetRenderDrawColor(renderer, 10, 20, 100, 0);
+    SDL_SetRenderDrawColor(renderer, 123, 125, 250, 0);
 
-    clock_t poczatek,uplyw = clock();
-   // SDL_DisplayMode* displayMode;
-   // int monitorHz = SDL_GetDisplayMode(0,0,displayMode) == 0 ? displayMode->refresh_rate : 60;
-    int monitorHz = 500;
+    clock_t uplyw = clock();
+
+    if(loadGame)
+        loadSavegame(&gra,argv[1]);
 
     while(1){
-        poczatek = clock();
 
         if(InputZKlawiatury(&gra) == -1 | Update(&gra,clock() - uplyw) == -1){
             break;
         }
        // printf("%ld\n",CLOCKS_PER_SEC/(clock()-uplyw));       //ILOSC FPS
-
-
         uplyw = clock();
 	    RenderWszystko(renderer, &gra);
 
-    /*    while (((clock() - poczatek)) <= CLOCKS_PER_SEC/monitorHz){
-#if WINDOWS
-            Sleep(1);
-#else
-            usleep(10);
-#endif
-        }*/
         SDL_RenderPresent(renderer);
 	}
 
-
-	//SDL_Delay(30000);
-
-   /* for (int i = 0; i < WIDOCZNE_SCHODKI; ++i) {
-        printf("%d %f\n",i,gra.schodki[i]->pozycja.x);
-    }*/
+    printf("Koniec gry!\n");
 	SDL_DestroyWindow(window);
 	SDL_Quit();
 

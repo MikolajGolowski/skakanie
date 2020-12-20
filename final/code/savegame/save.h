@@ -4,9 +4,10 @@
 #include "../mapa/Mapa.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int saveGame(gra_t* gra);
-int loadSavegame(gra_t* gra, char* loc[]);
+int loadSavegame(gra_t* gra, char loc[]);
 //int read(char* loc[]);
 
 #endif //NIEKONCZACE_SIE_SKAKANIE_SAVE_H

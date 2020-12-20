@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Update.h"
-//#include <math.h>
+#include <math.h>
 
 short Update(gra_t* gra,clock_t uplyw){
     //printf("%f\n",((float)((float)(uplyw*gra->gracz.predkosc_x)/CLOCKS_PER_SEC)));
@@ -21,10 +21,10 @@ short Update(gra_t* gra,clock_t uplyw){
     }
 
     if(gra->gracz.stan!=SPOCZYNEK){
-        gra->gracz.predkosc_y-=GRAWITACJA*WAGA_GRACZA;
+        gra->gracz.predkosc_y-=((GRAWITACJA*WAGA_GRACZA)*uplyw)/70000;
         if(gra->gracz.predkosc_y < 0){
             gra->gracz.stan = SPADEK;
-        }
+         }
     }
 
     //printf("%d\n",gra->indexAktSchodka);
@@ -89,6 +89,9 @@ short Update(gra_t* gra,clock_t uplyw){
     }
 
     //konczenie gry
-    if(gra->schodki[NajnizszySchodek(gra)]->pozycja.y < gra->gracz.pozycja_na_ekranie.y + ROZMIAR_GRACZA - 1000)
+    if(gra->schodki[NajnizszySchodek(gra)]->pozycja.y < gra->gracz.pozycja_na_ekranie.y + ROZMIAR_GRACZA - 1000){
+        printf("najn y %f\n",gra->schodki[NajnizszySchodek(gra)]->pozycja.y);
+        printf("gracz y %f\n",gra->gracz.pozycja_na_ekranie.y);
         return -1;
+    }
 }

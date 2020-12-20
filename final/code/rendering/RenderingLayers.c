@@ -8,8 +8,8 @@ void InitRender(){
     playerPos.y = pozycja_startowa_gracza_y,
     playerPos.w = ROZMIAR_GRACZA;
     playerPos.h = ROZMIAR_GRACZA;
-    printf("y %f\n",pozycja_startowa_gracza_y);
-    printf("x %f\n",pozycja_startowa_gracza_x);
+    //printf("y %f\n",pozycja_startowa_gracza_y);
+    //printf("x %f\n",pozycja_startowa_gracza_x);
 }
 
 bool RenderPlayer(SDL_Renderer* renderer, gracz_t *gracz){

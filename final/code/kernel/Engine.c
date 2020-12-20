@@ -43,3 +43,10 @@ short NajwyzszySchodek(gra_t* gra){   //to mozna przerobic na szybsze
     }
     return index;
 }
+
+short JestLiczba(char c){
+    if(c == '1' || c == '2' || c == '3' || c == '4' || c == '5' || c == '6' || c == '7' || c == '8' ||
+            c == '9' || c == '0' || c == '.')
+        return 1;
+    return 0;
+}

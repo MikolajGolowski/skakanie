@@ -3,11 +3,11 @@
 
 #define WINDOWS 0
 #define POZYCJA_GRACZA_Y 500
-#define GRAWITACJA 1
-#define WAGA_GRACZA 8
-#define SILA_NOG_GACZA 2800
+#define GRAWITACJA 10
+#define WAGA_GRACZA 80
+#define SILA_NOG_GACZA 3000
 #define PREDKOSC_X_GRACZA 800
-#define PREDKOSC_PODAZANIA 3000
+#define PREDKOSC_PODAZANIA 5000
 #define ZMIANA_KLOCKA 500   //jezeli klocek jest o tyle pod ekranem to go skasuj
 #define ILE_SCHODKOW_WYGENEROWAC_NA_POCZATKU 10
 #define ODSTEP_MIEDZY_SCHODKAMI 150
@@ -83,6 +83,7 @@ short KolejnySchodek(short schodekAkt);
 short WczesniejszySchodek(short schodekAkt);
 short NajwyzszySchodek(gra_t* gra);
 short NajnizszySchodek(gra_t* gra);
+short JestLiczba(char c);
 
 #endif //NIEKONCZACE_SIE_SKAKANIE_ENGINE_H
 
