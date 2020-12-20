@@ -3,27 +3,31 @@
 
 SDL_Event event;
 
-short InputZKlawiatury(gracz_t* gracz){
+short InputZKlawiatury(gra_t* gra){
     SDL_PollEvent(&event);
     switch (event.type) {
         case SDL_KEYDOWN:
             switch (event.key.keysym.sym) {
                 case SDLK_LEFT:
-                    gracz->predkosc_x = -PREDKOSC_X_GRACZA;
+                    gra->gracz.predkosc_x = -PREDKOSC_X_GRACZA;
                    // printf("WCISNIETO LEWY");
                     break;
                 case SDLK_RIGHT:
-                    gracz->predkosc_x = PREDKOSC_X_GRACZA;
+                    gra->gracz.predkosc_x = PREDKOSC_X_GRACZA;
                     //printf("WCISNIETO PRAWY");
                     break;
                 case SDLK_ESCAPE:
                     return -1;
                     break;
                 case SDLK_SPACE:
-                    if(gracz->stan==SPOCZYNEK){
-                        gracz->predkosc_y = SILA_NOG_GACZA;
-                        gracz->stan = SKOK;
+                    if(gra->gracz.stan==SPOCZYNEK){
+                        gra->gracz.predkosc_y = SILA_NOG_GACZA;
+                        gra->gracz.stan = SKOK;
                     }
+                    break;
+                case SDLK_s:
+                    saveGame(gra);
+                    break;
                 default:
                     break;
             }
@@ -32,12 +36,12 @@ short InputZKlawiatury(gracz_t* gracz){
         case SDL_KEYUP:
             switch (event.key.keysym.sym) {
                 case SDLK_LEFT:
-                    if(gracz->predkosc_x < 0)
-                        gracz->predkosc_x = 0;
+                    if(gra->gracz.predkosc_x < 0)
+                        gra->gracz.predkosc_x = 0;
                     break;
                 case SDLK_RIGHT:
-                    if(gracz->predkosc_x > 0)
-                        gracz->predkosc_x = 0;
+                    if(gra->gracz.predkosc_x > 0)
+                        gra->gracz.predkosc_x = 0;
                     break;
             }
             break;

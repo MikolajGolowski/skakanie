@@ -80,7 +80,8 @@ short Update(gra_t* gra,clock_t uplyw){
 
     //generowanie nowych schodkow
     if((gra->schodki[NajnizszySchodek(gra)]->pozycja.y) > (SCREEN_HEIGHT + ZMIANA_KLOCKA)){     //jezeli schodek jest nizej niz ZMIANA_KLOCKA pod ekranem to usun go i dodaj na gorze nowy
-        NastSchodek();
+        if(schodki[wygenerowane_schodki].pozycja.y>-ZMIANA_KLOCKA)//ta linijka jest potrzebna bo sie zapis buguje
+                NastSchodek();
         gra->schodki[NajnizszySchodek(gra)] += WIDOCZNE_SCHODKI;
 
        // printf("ID NOWEGO %d\n",gra->schodki[0]->nr_w_grze);

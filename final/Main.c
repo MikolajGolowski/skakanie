@@ -9,17 +9,11 @@
 #include "code/mapa/Mapa.h"
 #include <time.h>
 
-#if WINDOWS
-#include <Windows.h>
-#else
-#include <unistd.h>
-#endif
-
 int main(int argc, char *argv[])
 {
     if(argc != 1){
         if(strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0){
-            printf("Gra \"Niekonczace sie skakanie\" polega na wskoczeniu na jak najwyzszy schodek na losowo generowanej mapie.\n"
+            printf("\nGra \"Niekonczace sie skakanie\" polega na wskoczeniu na jak najwyzszy schodek na losowo generowanej mapie.\n"
                    "STEROWANIE:\nstrzalka w lewo - ruch w lewo\nstrzalka w prawo - ruch w prawo\nspacja - skok\n");
         }
         return 0;
@@ -89,7 +83,7 @@ int main(int argc, char *argv[])
     while(1){
         poczatek = clock();
 
-        if(InputZKlawiatury(&gra.gracz) == -1 | Update(&gra,clock() - uplyw) == -1){
+        if(InputZKlawiatury(&gra) == -1 | Update(&gra,clock() - uplyw) == -1){
             break;
         }
        // printf("%ld\n",CLOCKS_PER_SEC/(clock()-uplyw));       //ILOSC FPS

@@ -103,6 +103,12 @@
 		<Unit filename="/home/mikolaj/C/final/code/rendering/Tekstury.h">
 			<Option target="Niekonczace_sie_skakanie"/>
 		</Unit>
+		<Unit filename="/home/mikolaj/C/final/code/savegame/save.c">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
+		<Unit filename="/home/mikolaj/C/final/code/savegame/saveGame.h">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
 		<Unit filename="/home/mikolaj/C/final/code/sterowanie/Sterowanie.c">
 			<Option target="Niekonczace_sie_skakanie"/>
 		</Unit>

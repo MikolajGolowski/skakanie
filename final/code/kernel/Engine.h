@@ -16,6 +16,8 @@
 #define LEWO 0
 #define PRAWO 1
 
+#define SAVEGAME "savegame.nss"
+
 #define WIDOCZNE_SCHODKI 16
 #define SCHODKI_DO_WYGRANIA 100000
 #define ROZMIAR_GRACZA 75
