@@ -1,5 +1,5 @@
-#ifndef NIEKONCZACE_SIE_SKAKANIE_STEROWANIE_H
-#define NIEKONCZACE_SIE_SKAKANIE_STEROWANIE_H
+#ifndef _NIEKONCZACE_SIE_SKAKANIE_STEROWANIE_H
+#define _NIEKONCZACE_SIE_SKAKANIE_STEROWANIE_H
 #include "../kernel/Engine.h"
 #include "../savegame/save.h"
 #include "SDL.h"

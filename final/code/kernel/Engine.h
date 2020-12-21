@@ -1,5 +1,5 @@
-#ifndef ENGINE_H
-#define ENGINE_H
+#ifndef _ENGINE_NSS_H
+#define _ENGINE_NSS_H
 
 #define POZYCJA_GRACZA_Y 500
 #define GRAWITACJA 10

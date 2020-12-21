@@ -1,6 +1,6 @@
 
-#ifndef NIEKONCZACE_SIE_SKAKANIE_UPDATE_H
-#define NIEKONCZACE_SIE_SKAKANIE_UPDATE_H
+#ifndef _NIEKONCZACE_SIE_SKAKANIE_UPDATE_H
+#define _NIEKONCZACE_SIE_SKAKANIE_UPDATE_H
 #include "Engine.h"
 #include <time.h>
 #include "SDL.h"

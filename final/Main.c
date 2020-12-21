@@ -1,4 +1,5 @@
-
+#ifndef _MAIN_NIEKONCZACE_SIE_SKAKANIE_C
+#define _MAIN_NIEKONCZACE_SIE_SKAKANIE_C
 
 #include "SDL.h"
 #include <string.h>
@@ -94,3 +95,4 @@ int main(int argc, char *argv[])
 
 	return 0;
 }
+#endif

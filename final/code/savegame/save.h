@@ -1,5 +1,5 @@
-#ifndef _SAVE_H
-#define _SAVE_H
+#ifndef _SAVE_NSS_H
+#define _SAVE_NSS_H
 #include "../kernel/Engine.h"
 #include "../mapa/Mapa.h"
 #include <stdio.h>
