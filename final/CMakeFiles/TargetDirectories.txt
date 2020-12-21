@@ -1,0 +1,3 @@
+/home/mikolaj/C/final/CMakeFiles/rebuild_cache.dir
+/home/mikolaj/C/final/CMakeFiles/edit_cache.dir
+/home/mikolaj/C/final/CMakeFiles/Niekonczace_sie_skakanie.dir

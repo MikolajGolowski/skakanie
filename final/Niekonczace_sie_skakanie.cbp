@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Niekonczace_sie_skakanie"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/mikolaj/C/final"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/mikolaj/C/final"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/mikolaj/C/final"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Niekonczace_sie_skakanie">
+				<Option output="/home/mikolaj/C/final/Niekonczace_sie_skakanie" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mikolaj/C/final"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/SDL2"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 Niekonczace_sie_skakanie"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Niekonczace_sie_skakanie/fast">
+				<Option output="/home/mikolaj/C/final/Niekonczace_sie_skakanie" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mikolaj/C/final"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/SDL2"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 Niekonczace_sie_skakanie/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/mikolaj/C/final/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/mikolaj/C/final/Main.c">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
+		<Unit filename="/home/mikolaj/C/final/code/kernel/Engine.c">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
+		<Unit filename="/home/mikolaj/C/final/code/kernel/Engine.h">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
+		<Unit filename="/home/mikolaj/C/final/code/kernel/Update.c">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
+		<Unit filename="/home/mikolaj/C/final/code/kernel/Update.h">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
+		<Unit filename="/home/mikolaj/C/final/code/mapa/Mapa.c">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
+		<Unit filename="/home/mikolaj/C/final/code/mapa/Mapa.h">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
+		<Unit filename="/home/mikolaj/C/final/code/rendering/RenderingLayers.c">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
+		<Unit filename="/home/mikolaj/C/final/code/rendering/RenderingLayers.h">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
+		<Unit filename="/home/mikolaj/C/final/code/rendering/Tekstury.c">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
+		<Unit filename="/home/mikolaj/C/final/code/rendering/Tekstury.h">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
+		<Unit filename="/home/mikolaj/C/final/code/savegame/save.c">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
+		<Unit filename="/home/mikolaj/C/final/code/savegame/save.h">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
+		<Unit filename="/home/mikolaj/C/final/code/sterowanie/Sterowanie.c">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
+		<Unit filename="/home/mikolaj/C/final/code/sterowanie/Sterowanie.h">
+			<Option target="Niekonczace_sie_skakanie"/>
+		</Unit>
+		<Unit filename="/home/mikolaj/C/final/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/mikolaj/C/final/cmake/FindSDL2.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/mikolaj/C/final/cmake/FindSDL2_image.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
