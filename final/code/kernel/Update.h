@@ -7,7 +7,9 @@
 #include "SDL_image.h"
 #include "../rendering/Tekstury.h"
 #include "../mapa/Mapa.h"
-//#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
 
 short Update(gra_t* gra, clock_t uplyw);
 

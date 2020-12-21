@@ -1,7 +1,3 @@
-//
-// Created by mikolaj on 24.11.2020.
-//
-
 #ifndef NIEKONCZACE_SIE_SKAKANIE_TEKSTURY_H
 #define NIEKONCZACE_SIE_SKAKANIE_TEKSTURY_H
 

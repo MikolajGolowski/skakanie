@@ -1,8 +1,4 @@
-
-#include <stdio.h>
-#include <stdlib.h>
 #include "Update.h"
-#include <math.h>
 
 short Update(gra_t* gra,clock_t uplyw){
     //printf("%f\n",((float)((float)(uplyw*gra->gracz.predkosc_x)/CLOCKS_PER_SEC)));

@@ -1,5 +1,5 @@
-#ifndef RENDERINGLAYERS_H
-#define RENDERINGLAYERS_H
+#ifndef _RENDERINGLAYERS_H
+#define _RENDERINGLAYERS_H
 
 #include "SDL.h"
 #include "SDL_image.h"

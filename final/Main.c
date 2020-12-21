@@ -1,6 +1,7 @@
+
+
 #include "SDL.h"
 #include <string.h>
-#include "SDL_image.h"
 #include "code/kernel/Engine.h"
 #include "code/rendering/RenderingLayers.h"
 #include "code/rendering/Tekstury.h"

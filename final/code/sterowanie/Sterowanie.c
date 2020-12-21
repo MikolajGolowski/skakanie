@@ -1,5 +1,4 @@
 #include "Sterowanie.h"
-#include "SDL.h"
 
 SDL_Event event;
 

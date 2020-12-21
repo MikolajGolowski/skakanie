@@ -1,5 +1,5 @@
-#ifndef NIEKONCZACE_SIE_SKAKANIE_MAPA_H
-#define NIEKONCZACE_SIE_SKAKANIE_MAPA_H
+#ifndef _NIEKONCZACE_SIE_SKAKANIE_MAPA_H
+#define _NIEKONCZACE_SIE_SKAKANIE_MAPA_H
 
 #include "../kernel/Engine.h"
 #include <stdio.h>
