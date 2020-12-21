@@ -1,3 +1,0 @@
-/home/mikolaj/C/os/Mikolaj_Golowski/Niekonczace_sie_skakanie/CMakeFiles/rebuild_cache.dir
-/home/mikolaj/C/os/Mikolaj_Golowski/Niekonczace_sie_skakanie/CMakeFiles/Niekonczace_sie_skakanie.dir
-/home/mikolaj/C/os/Mikolaj_Golowski/Niekonczace_sie_skakanie/CMakeFiles/edit_cache.dir
